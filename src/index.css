@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+
+  ::-moz-selection {
+    background: #ef40405a
+  }
+  ::-webkit-selection {
+    background: #ef40405a
+  }
+  ::selection {
+    background: #ef40405a
+  }
+
+  .text-smooth {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  @font-face {
+    font-family: "MuseoModerno-VariableFont_wght";
+    src: url("./assets/fonts/MuseoModerno-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Manrope-VariableFont_wght";
+    src: url("./assets/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+
+ @media (min-width: 640px) {
+  
+}
+  a,
+  p,
+  span {
+    @apply font-manrope;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-museomoderno tracking-headings;
+  }
+}
+
+@layer components {
+ 
+}
+
+@layer utilities {
+  
+}
