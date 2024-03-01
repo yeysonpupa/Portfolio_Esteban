@@ -11,8 +11,8 @@ export default {
         'md2': '872px'
       },
       fontSize: {
-        'TituloExtraGrande': '128px',
-        'TituloGrande': '116px',
+        'TituloExtraGrande': '120px',
+        'TituloGrande': '108px',
         'TituloMediano': '68px',
         'TituloExtraGrandePhone': '56px',
         'TituloNormal': '44px',

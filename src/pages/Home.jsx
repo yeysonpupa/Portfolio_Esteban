@@ -1,4 +1,5 @@
 import Divider from "../UI/Divider";
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
     <div>
         <Navbar />
         <Divider />
-        Hola
+        <Hero />
     </div>
   );
 };
