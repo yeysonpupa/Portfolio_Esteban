@@ -49,4 +49,14 @@
       cursor: none
     }
   }
+
+  .nowrap-text {
+    white-space: nowrap;
+  }
+  
+  @media screen and (max-width: 599px) {
+    .nowrap-text {
+      white-space: normal;
+    }
+  }
 }

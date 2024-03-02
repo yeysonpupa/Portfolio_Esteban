@@ -35,7 +35,7 @@ const Cursor = () => {
             transition: transform 0.2s ease-out; 
           }
 
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 767px) {
             body {
               cursor: auto; 
             }
