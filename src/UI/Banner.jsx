@@ -1,14 +1,21 @@
 import { useSpring, animated } from 'react-spring';
+import { useMediaQuery } from 'react-responsive';
 
 const Banner = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const initialTransform = isMobile ? 'translateX(-200%)' : 'translateX(-69%)';
+  const endTransform = isMobile ? 'translateX(4%)' : 'translateX(2%)';
+  const duration = isMobile ? 10000 : 12000;
+
   const [props, set] = useSpring(() => ({
-    from: { transform: 'translateX(-69%)' },
-    to: { transform: 'translateX(2%)' },
-    config: { duration: 15000 },
+    from: { transform: initialTransform },
+    to: { transform: endTransform },
+    config: { duration },
     onRest: () => {
       set({
-        from: { transform: 'translateX(2%)' },
-        to: { transform: 'translateX(-69%)' },
+        from: { transform: endTransform },
+        to: { transform: initialTransform },
       });
     },
   }));
