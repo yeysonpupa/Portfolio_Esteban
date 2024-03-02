@@ -26,7 +26,7 @@ const Navbar = () => {
   const renderCircle = (id) => {
     return (
       <span
-        className={`absolute inline-flex items-center justify-center w-6 h-6 rounded-full text-primary cursor-pointer ${
+        className={`absolute inline-flex items-center justify-center w-6 h-6 rounded-full text-primary cursor-none ${
           hovered === id ? 'visible' : 'hidden'
         }`}
         style={{ top: '-10%', left: '50%', transform: 'translate(-50%, -50%)' }}
@@ -95,7 +95,7 @@ const Navbar = () => {
           <div className="relative inline-flex items-center">
             <Link
               to="/projects"
-              className="text-TextoNormal font-manrope text-blackText"
+              className="text-TextoNormal font-manrope text-blackText cursor-none"
               onMouseEnter={() => handleMouseEnter('projects')}
               onMouseLeave={handleMouseLeave}
             >
@@ -106,7 +106,7 @@ const Navbar = () => {
           <div className="relative inline-flex items-center">
             <Link
               to="/about"
-              className="text-TextoNormal font-manrope text-blackText"
+              className="text-TextoNormal font-manrope text-blackText cursor-none"
               onMouseEnter={() => handleMouseEnter('about')}
               onMouseLeave={handleMouseLeave}
             >
@@ -117,7 +117,7 @@ const Navbar = () => {
           <div className="relative inline-flex items-center">
             <Link
               to="/snap"
-              className="text-TextoNormal font-manrope text-blackText"
+              className="text-TextoNormal font-manrope text-blackText cursor-none"
               onMouseEnter={() => handleMouseEnter('snap')}
               onMouseLeave={handleMouseLeave}
             >
