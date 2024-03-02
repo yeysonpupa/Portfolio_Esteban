@@ -37,7 +37,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-whiteBackground p-4 md:p-8 flex justify-between items-center relative">
+    <nav
+      className={`p-4 md:p-8 flex justify-between items-center relative ${
+        isMenuOpen ? 'bg-whiteBackground fixed top-0 left-0 right-0 bottom-0 z-50' : ''
+      }`}
+    >
       <div className="text-white md:text-xl text-TextoGrande font-bold">
         <Link to="/" className="text-2xl md:text-TextoGrande font-museomoderno" onClick={closeMenu}>
           <span className="text-blackText font-light">{`{Esteban`}</span>
@@ -51,27 +55,39 @@ const Navbar = () => {
         </button>
       </div>
       {isMenuOpen ? (
-        <div className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-whiteBackground flex flex-col items-center justify-center overflow-hidden" style={{ paddingTop: '64px' }}>
+        <div
+          className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-whiteBackground flex flex-col items-center justify-center overflow-hidden"
+          style={{ paddingTop: '64px' }}
+        >
           <Link
             to="/projects"
-            className="text-TextoNormal font-manrope text-blackText mb-4"
+            className="text-TextoNormal font-manrope text-blackText mb-4 relative"
+            onMouseEnter={() => handleMouseEnter('projects')}
+            onMouseLeave={handleMouseLeave}
             onClick={closeMenu}
           >
             Projects
+            {renderCircle('projects')}
           </Link>
           <Link
             to="/about"
-            className="text-TextoNormal font-manrope text-blackText mb-4"
+            className="text-TextoNormal font-manrope text-blackText mb-4 relative"
+            onMouseEnter={() => handleMouseEnter('about')}
+            onMouseLeave={handleMouseLeave}
             onClick={closeMenu}
           >
             About
+            {renderCircle('about')}
           </Link>
           <Link
             to="/snap"
-            className="text-TextoNormal font-manrope text-blackText mb-4"
+            className="text-TextoNormal font-manrope text-blackText mb-4 relative"
+            onMouseEnter={() => handleMouseEnter('snap')}
+            onMouseLeave={handleMouseLeave}
             onClick={closeMenu}
           >
             Snap
+            {renderCircle('snap')}
           </Link>
         </div>
       ) : (

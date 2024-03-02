@@ -12,7 +12,7 @@ const Hero = () => {
       </p>
 
       <div className="flex items-center justify-center">
-        <img src={ArrowIcon} alt="Arrow Icon" className="w-15 h-15 pt-2 pl-2 pb-0 md:pt-10 md:pl-10 md:pb-5 transform scale-x-50 scale-y-50 md:scale-x-100 md:scale-y-100" />
+        <img src={ArrowIcon} alt="Arrow Icon" className="w-15 h-15 pt-2 pl-2 pb-0 md:pt-10 md:pl-40 md:pb-5 transform scale-x-50 scale-y-50 md:scale-x-100 md:scale-y-100" />
       </div>
 
       <div className="flex items-center justify-end">
@@ -35,12 +35,12 @@ const Hero = () => {
         today?{' '}
       </p>
 
-      <div className="flex flex-col items-end">
+      <div className="flex flex-col items-end pt-10 md:pt-0 pb-8">
         <a
           href="https://www.linkedin.com/in/yeyson-esteban-pulido-parra/"
           target="_blank"
           rel="noopener noreferrer"
-          className="border border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-4 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground mb-2 font-manrope"
+          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground mb-2 font-manrope"
         >
           LinkedIn
         </a>
@@ -49,7 +49,7 @@ const Hero = () => {
           href="https://www.canva.com/design/DAFSPevxb6A/DpW_9JhzD4FeUvml77xuOg/view?"
           target="_blank"
           rel="noopener noreferrer"
-          className="border border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-4 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground mb-2 font-manrope"
+          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground font-manrope"
         >
           Resume
         </a>
