@@ -1,7 +1,8 @@
-import Banner from "../UI/Banner";
+import Banner from "../UI/BannerHome";
 import Divider from "../UI/Divider";
 import Line from "../UI/Line";
 import Hero from "../components/Hero";
+import Keys from "../components/Keys";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <Line />
         <Banner />
         <Line />
+        <Keys />
     </div>
   );
 };
