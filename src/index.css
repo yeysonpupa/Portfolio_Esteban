@@ -43,4 +43,10 @@
     font-display: swap;
     font-style: normal;
   }
+
+  @media (min-width: 640px) {
+    * {
+      cursor: none
+    }
+  }
 }

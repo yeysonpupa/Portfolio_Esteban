@@ -24,15 +24,15 @@ const Cursor = () => {
           }
 
           .cursor {
-            width: 30px; 
-            height: 30px; 
+            width: 40px; 
+            height: 40px; 
             background-color: #10BFBF;
             border-radius: 50%;
             mix-blend-mode: difference;
             position: fixed;
             z-index: 9999;
             pointer-events: none;
-            transition: transform 0.1s ease-out; 
+            transition: transform 0.2s ease-out; 
           }
 
           @media only screen and (max-width: 600px) {
@@ -54,3 +54,4 @@ const Cursor = () => {
 };
 
 export default Cursor;
+

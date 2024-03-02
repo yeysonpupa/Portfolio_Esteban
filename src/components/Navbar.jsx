@@ -43,7 +43,7 @@ const Navbar = () => {
       }`}
     >
       <div className="text-white md:text-xl text-TextoGrande font-bold">
-        <Link to="/" className="text-2xl md:text-TextoGrande font-museomoderno" onClick={closeMenu}>
+        <Link to="/" className="text-2xl md:text-TextoGrande font-museomoderno cursor-none" onClick={closeMenu}>
           <span className="text-blackText font-light">{`{Esteban`}</span>
           <span className="text-primary font-light">.</span>
           <span className="text-blackText font-light">{`}`}</span>

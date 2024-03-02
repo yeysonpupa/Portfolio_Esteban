@@ -97,7 +97,7 @@ const Hero = () => {
           href="https://www.linkedin.com/in/yeyson-esteban-pulido-parra/"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground mb-2 font-manrope"
+          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground mb-2 font-manrope cursor-none"
         >
           LinkedIn
         </a>
@@ -106,7 +106,7 @@ const Hero = () => {
           href="https://www.canva.com/design/DAFSPevxb6A/DpW_9JhzD4FeUvml77xuOg/view?"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground font-manrope"
+          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground font-manrope cursor-none"
         >
           Resume
         </a>
