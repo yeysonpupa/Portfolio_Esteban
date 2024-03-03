@@ -3,16 +3,16 @@ import Copyright from "../components/Copyright";
 import Divider from "../UI/Divider";
 import Line from "../UI/Line";
 import Footer from "../components/Footer";
-import Hello from "../components/Hello";
 import Navbar from "../components/Navbar";
 import Timeline from "../components/Timeline";
+import AboutHero from "../components/AboutHero";
 
 const About = () => {
     return (
       <div className="bg-whiteBackground">
         <Navbar />
         <Divider />
-        <Hello />
+        <AboutHero />
         <Line />
         <BannerAbout />
         <Line />

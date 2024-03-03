@@ -1,23 +1,8 @@
-import { useState } from 'react';
-import { animateScroll as scroll } from 'react-scroll';
 import Firma from '../assets/images/firma.svg';
-import ArrowUpIconPrimary from '../assets/images/arrowup-primary.svg';
-import ArrowUpIconWhite from '../assets/images/arrowup-white.svg';
+import UpButton from '../UI/UpButton';
 
 const Footer = () => {
   const emailAddress = 'estebanpulidodev@gmail.com';
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHover = () => {
-    setIsHovered(!isHovered);
-  };
-
-  const scrollToTop = () => {
-    scroll.scrollToTop({
-      duration: 500,
-      smooth: 'easeInOutQuad',
-    });
-  };
 
   return (
     <div className="relative flex flex-col items-center justify-center pt-8 md:pt-16">
@@ -38,20 +23,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <button
-        className={`bg-transparent border-2 border-primary rounded-full mr-8 md:mr-16 p-1 md:p-2 cursor-none transition-all duration-300 ${isHovered ? 'hover:bg-primary' : ''} absolute top-1/2 right-0 transform -translate-y-1/2`}
-        onMouseEnter={handleHover}
-        onMouseLeave={handleHover}
-        onClick={scrollToTop}
-      >
-        <div className="flex items-center justify-center">
-          {isHovered ? (
-            <img src={ArrowUpIconWhite} alt="Arrow Icon" className="w-6 h-auto md:w-12" />
-          ) : (
-            <img src={ArrowUpIconPrimary} alt="Arrow Icon" className="w-6 h-auto md:w-12" />
-          )}
-        </div>
-      </button>
+      <UpButton />
     </div>
   );
 };
