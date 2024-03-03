@@ -1,4 +1,5 @@
 import Divider from "../UI/Divider";
+import Copyright from "../components/Copyright";
 import Navbar from "../components/Navbar";
 import ProjectsMenu from "../components/ProjectsMenu";
 
@@ -8,6 +9,7 @@ const Projects = () => {
         <Navbar/>
         <Divider />
         <ProjectsMenu />
+        <Copyright />
       </div> 
     );
 };
