@@ -1,6 +1,6 @@
 const Keys = () => {
     return (
-        <div className="pr-8 pl-8 pt-8 bg-whiteBackground">
+        <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 bg-whiteBackground">
             <p className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText">
                 Have an idea in mind{' '}
                 <span className="text-TextoMedianoPhone md:text-TituloNormal text-primary font-manrope">?</span>
@@ -15,7 +15,7 @@ const Keys = () => {
                     </p>
                 </div>
 
-                <div className="ml-2 md:ml-4">
+                <div>
                     <p className="font-manrope text-TextoGrande md:text-TituloMediano text-blackText"><span className="font-manrope text-TextoGrande md:text-TituloMediano text-primary">{`// `}</span>Research</p>
                     <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText ml-8 md:ml-16">
                         {`Here I understand the essence of the user's needs and paint a vivid portrait of purpose, ensuring every design choice has intention.`}

@@ -24,15 +24,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Agregar o eliminar la clase para bloquear el scroll
     const body = document.body;
     if (isMenuOpen) {
       body.style.overflow = 'hidden';
     } else {
       body.style.overflow = 'visible';
     }
-
-    // Limpiar efecto secundario al desmontar el componente
     return () => {
       body.style.overflow = 'visible';
     };
@@ -53,15 +50,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`p-4 md:p-8 flex justify-between items-center relative ${
+      className={`pr-8 pl-8 pt-2 pb-2 md:pr-16 md:pl-16 md:pt-4 md:pb-4 flex justify-between items-center relative ${
         isMenuOpen ? 'bg-whiteBackground fixed top-0 left-0 right-0 bottom-0 z-50' : ''
       }`}
     >
-      <div className="text-white md:text-xl text-TextoGrande font-bold">
-        <Link to="/" className="text-2xl md:text-TextoGrande font-museomoderno cursor-none" onClick={closeMenu}>
-          <span className="text-blackText font-light">{`{Esteban`}</span>
-          <span className="text-primary font-light">.</span>
-          <span className="text-blackText font-light">{`}`}</span>
+      <div>
+        <Link to="/" className="cursor-none" onClick={closeMenu}>
+          <span className="text-TextoMedianoPhone md:text-TextoGrande text-blackText font-museomoderno font-light">{`{Esteban`}</span>
+          <span className="text-TextoMedianoPhone md:text-TextoGrande text-primary font-museomoderno font-light">.</span>
+          <span className="text-TextoMedianoPhone md:text-TextoGrande text-blackText font-museomoderno font-light">{`}`}</span>
         </Link>
       </div>
       <div className="md:hidden">
