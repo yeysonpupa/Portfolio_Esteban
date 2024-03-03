@@ -36,7 +36,7 @@ const Hero = () => {
   }, [dynamicText, wordIndex, isDeleting, pauseBeforeDelete, words]);
 
   return (
-    <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 bg-whiteBackground">
+    <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-8 bg-whiteBackground">
       <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText ml-1">
         Hello there! I am Esteban Pulido
       </p>
@@ -93,7 +93,7 @@ const Hero = () => {
         `}
       </style>
 
-      <div className="flex flex-col items-end pt-10 md:pt-0 pb-8">
+      <div className="flex flex-col items-end pt-10 md:pt-0">
         <a
           href="https://www.linkedin.com/in/yeyson-esteban-pulido-parra/"
           target="_blank"

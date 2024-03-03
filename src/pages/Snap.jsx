@@ -1,4 +1,5 @@
 import Divider from "../UI/Divider";
+import Copyright from "../components/Copyright";
 import Navbar from "../components/Navbar";
 
 const Snap = () => {
@@ -6,6 +7,7 @@ const Snap = () => {
       <div className="bg-whiteBackground">
         <Navbar />
         <Divider />
+        <Copyright />
       </div>
     );
 };

@@ -1,7 +1,7 @@
 import { useSpring, animated } from 'react-spring';
 import { useMediaQuery } from 'react-responsive';
 
-const Banner = () => {
+const BannerHome = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const initialTransform = isMobile ? 'translateX(-200%)' : 'translateX(-69%)';
@@ -51,4 +51,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerHome;

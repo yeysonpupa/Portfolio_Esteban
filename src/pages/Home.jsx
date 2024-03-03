@@ -1,5 +1,5 @@
-import Banner from "../UI/BannerHome";
-import Copyright from "../UI/Copyright";
+import BannerHome from "../components/BannerHome";
+import Copyright from "../components/Copyright";
 import Divider from "../UI/Divider";
 import Line from "../UI/Line";
 import Footer from "../components/Footer";
@@ -14,7 +14,7 @@ const Home = () => {
         <Divider />
         <Hero />
         <Line />
-        <Banner />
+        <BannerHome />
         <Line />
         <Keys />
         <Footer />

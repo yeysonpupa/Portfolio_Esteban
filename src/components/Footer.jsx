@@ -13,7 +13,7 @@ const Footer = () => {
       <h1 className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText">
         {`Let's Connect`}<span className="text-primary">!</span>
       </h1>
-      <p className="text-TextoMedianoPhone md:text-TextoGrande text-blackText font-museomoderno">
+      <p className="text-TextoMedianoPhone md:text-TextoGrande text-blackText font-manrope">
         <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
       </p>
     </div>
