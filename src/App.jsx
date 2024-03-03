@@ -7,7 +7,7 @@ import Snap from './pages/Snap';
 function App() {
   return (
     <BrowserRouter>
-      <div className="app">
+      <div className="app bg-whiteBackground">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

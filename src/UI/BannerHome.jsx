@@ -21,7 +21,7 @@ const Banner = () => {
   }));
 
   return (
-    <div style={{ overflow: 'hidden', whiteSpace: 'nowrap' }}>
+    <div className="bg-whiteBackground" style={{ overflow: 'hidden', whiteSpace: 'nowrap' }}>
       <animated.div style={props}>
         <p>
           <span className="font-museomoderno text-TextoMedianoPhone md:text-TituloNormal text-primary"> • </span>

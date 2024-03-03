@@ -26,7 +26,7 @@ const Keys = () => {
                     </p>
                     <p className="font-manrope text-TextoGrande md:text-TituloMediano text-blackText pt-4 md:pt-6 ml-8 md:ml-16">Develop</p>
                     <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText ml-8 md:ml-16">
-                        {`Breathing life into my designs, I code with precision, turning visions into engaging realities.`}
+                        {`Giving life to my designs through careful coding, I turn imaginative concepts into functional, engaging realities with precision and skill.`}
                     </p>
                     <p className="font-manrope text-TextoGrande md:text-TituloMediano text-blackText pt-4 md:pt-6 ml-8 md:ml-16">Think out of the box</p>
                     <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText ml-8 md:ml-16">

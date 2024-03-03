@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -22,6 +22,21 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     setHovered(null);
   };
+
+  useEffect(() => {
+    // Agregar o eliminar la clase para bloquear el scroll
+    const body = document.body;
+    if (isMenuOpen) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'visible';
+    }
+
+    // Limpiar efecto secundario al desmontar el componente
+    return () => {
+      body.style.overflow = 'visible';
+    };
+  }, [isMenuOpen]);
 
   const renderCircle = (id) => {
     return (

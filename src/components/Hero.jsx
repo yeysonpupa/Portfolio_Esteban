@@ -6,33 +6,34 @@ const Hero = () => {
   const words = ['Creating', 'Dreaming', 'Coding'];
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = 150; 
-  const deletingSpeed = 75; 
+  const typingSpeed = 100;
+  const pauseBeforeDelete = 2000;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const currentWord = words[wordIndex];
-      const currentText = dynamicText;
-
-      if (isDeleting) {
-        setDynamicText(currentText.slice(0, -1));
-      } else {
-        setDynamicText(currentWord.slice(0, currentText.length + 1));
-      }
-
-      if (
-        (isDeleting && currentText.length === 0) ||
-        (!isDeleting && currentText === currentWord)
-      ) {
-        setIsDeleting(!isDeleting);
-        if (!isDeleting) {
-          setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+      setDynamicText((prevText) => {
+        const currentWord = words[wordIndex];
+        if (isDeleting) {
+          return prevText.slice(0, -1);
+        } else {
+          return currentWord.slice(0, prevText.length + 1);
         }
-      }
-    }, isDeleting ? deletingSpeed : typingSpeed);
+      });
+    }, typingSpeed);
 
     return () => clearInterval(intervalId);
-  }, [dynamicText, wordIndex, isDeleting, words]);
+  }, [wordIndex, isDeleting, words]);
+
+  useEffect(() => {
+    if (dynamicText === words[wordIndex] && !isDeleting) {
+      setTimeout(() => {
+        setIsDeleting(true);
+      }, pauseBeforeDelete);
+    } else if (dynamicText === '' && isDeleting) {
+      setIsDeleting(false);
+      setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }
+  }, [dynamicText, wordIndex, isDeleting, pauseBeforeDelete, words]);
 
   return (
     <div className="pr-8 pl-8 pt-8 md:pt-16 bg-whiteBackground">
