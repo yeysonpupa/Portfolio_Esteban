@@ -11,7 +11,7 @@ const Footer = () => {
         className="w-36 h-auto md:w-80"
       />
       <h1 className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText">
-        {`Let's Connect`}<span className="text-primary">!</span>
+        {`Let's Connect`}<span className="text-primary font-manrope text-TextoMedianoPhone md:text-TituloNormal">!</span>
       </h1>
       <p className="text-TextoMedianoPhone md:text-TextoGrande text-blackText font-manrope">
         <a href={`mailto:${emailAddress}`}>{emailAddress}</a>

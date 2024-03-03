@@ -5,6 +5,7 @@ import Line from "../UI/Line";
 import Footer from "../components/Footer";
 import Hello from "../components/Hello";
 import Navbar from "../components/Navbar";
+import Timeline from "../components/Timeline";
 
 const About = () => {
     return (
@@ -15,6 +16,7 @@ const About = () => {
         <Line />
         <BannerAbout />
         <Line />
+        <Timeline />
         <Footer />
         <Copyright />
       </div>
