@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Keys from "../components/Keys";
 import Navbar from "../components/Navbar";
+import Latestworks from "../components/Latestworks";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <Line />
         <BannerHome />
         <Line />
+        <Latestworks />
         <Keys />
         <Footer />
         <Copyright />
