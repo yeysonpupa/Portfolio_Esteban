@@ -23,7 +23,6 @@ const ProjectDetail = () => {
     return <div>Proyecto no encontrado</div>;
   }
 
-  // Function to render description with line breaks
   const renderDescriptionWithLineBreaks = () => {
     return project.description.split('\n').map((paragraph, index) => (
       <p key={index} className="mb-4 md:mb-8 font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
@@ -37,9 +36,9 @@ const ProjectDetail = () => {
       <Navbar />
       <Divider />
 
-      <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-8 bg-whiteBackground">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-whiteBackground">
-          <div ref={textRef} className="mb-4 md:mb-8">
+      <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-4 bg-whiteBackground">
+        <div className="grid grid-cols-1 md:grid-cols-3 bg-whiteBackground mb-4 md:mb-8">
+          <div ref={textRef} className="mb-4 md:mb-0 col-span-2">
             <h1 className="font-manrope text-TituloExtraGrandePhone md:text-TituloGrande text-blackText">{project.title}</h1>
             <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">
               Year
@@ -61,7 +60,7 @@ const ProjectDetail = () => {
             </p>
           </div>
 
-          <div className="relative flex justify-end items-start">
+          <div className="relative flex justify-center items-center col-span-1">
             <img
               id="mainImage"
               src={project.imageMain}
@@ -72,19 +71,18 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* Description */}
         <div>
           {renderDescriptionWithLineBreaks()}
         </div>
 
-        {/* Tools */}
         <div>
           <p className="mb-4 md:mb-8 font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">{`${project.tools}`}</p>
         </div>
 
-        {/* Prototype Image */}
-        <div>
-          <img src={project.imagePrototype} alt={`${project.title}`} className="max-w-full" />
+        <div className="imagePrototype">
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <img src={project.imagePrototype} alt={`${project.title}`} className="max-w-full" />
+          </a>
         </div>
       </div>
 
