@@ -31,7 +31,7 @@ export default {
       },
       colors: {
         'transparent': 'transparent',
-        'primary': '#FF5757',
+        'primary': '#EF4040',
         'blackText': '#1E1E1E',
         'whiteBackground': '#FCF9F9',
         'greyText': '#818181',
