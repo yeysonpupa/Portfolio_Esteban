@@ -1,94 +1,76 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
 
-const Cursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  const cursorRef = useRef(null);
-
-  useEffect(() => {
-    const updateCursorPosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    document.addEventListener('mousemove', updateCursorPosition);
-
-    return () => {
-      document.removeEventListener('mousemove', updateCursorPosition);
-    };
-  }, []); // Dependencia vacía para ejecutarse solo una vez
+export default function Cursor() {
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  const curs = useRef(null);
+  const textView = useRef(null);
 
   useEffect(() => {
-    const handleHover = () => {
-      setIsHovering(true);
-    };
+    const images = document.querySelectorAll(".imagePrototype");
 
-    const handleLeave = () => {
-      setIsHovering(false);
-    };
+    const tl = gsap.timeline({ paused: true });
 
-    const newImagePrototypeRefs = document.querySelectorAll('.imagePrototype');
+    tl.to(curs.current, { height: "56px", width: "56px", ease: "expo.inout" }).to(
+      textView.current,
+      { opacity: 1, ease: "expo.inout" },
+      0
+    );
 
-    newImagePrototypeRefs.forEach((el) => {
-      el.addEventListener('mouseenter', handleHover);
-      el.addEventListener('mouseleave', handleLeave);
+    images.forEach((img) => {
+      img.addEventListener("mouseenter", function () {
+        tl.play();
+      });
+
+      img.addEventListener("mouseleave", function () {
+        tl.reverse();
+        tl.eventCallback("onReverseComplete", function () {
+          gsap.set(curs.current, { height: "12px", width: "12px" });
+          gsap.set(textView.current, { opacity: 0 });
+        });
+      });
     });
 
+    function moveCursor(e) {
+      setCursor({ x: e.pageX, y: e.pageY - window.scrollY });
+    }
+
+    document.addEventListener("mousemove", moveCursor);
+
     return () => {
-      newImagePrototypeRefs.forEach((el) => {
-        el.removeEventListener('mouseenter', handleHover);
-        el.removeEventListener('mouseleave', handleLeave);
-      });
+      document.removeEventListener("mousemove", moveCursor);
     };
   }, []);
 
+  const { x, y } = cursor;
+
   return (
-    <>
-      <style>
-        {`
-          body {
-            cursor: none;
-          }
-
-          .cursor {
-            width: ${isHovering ? '80px' : '20px'};
-            height: ${isHovering ? '80px' : '20px'};
-            background-color: #10BFBF;
-            border-radius: 50%;
-            mix-blend-mode: difference;
-            position: fixed;
-            z-index: 9999;
-            pointer-events: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
-          }
-
-          .cursor-text {
-            font-family: 'Manrope', sans-serif;
-            font-size: ${isHovering ? '20px' : '12px'};
-            color: #000;
-            text-align: center;
-            white-space: nowrap;
-            transition: font-size 0.2s ease-out;
-          }
-
-          @media only screen and (max-width: 767px) {
-            body {
-              cursor: auto;
-            }
-
-            .cursor {
-              display: none;
-            }
-          }
-        `}
-      </style>
-      <div ref={cursorRef} className="cursor" style={{ transform: `translate(${position.x}px, ${position.y}px)` }}>
-        {isHovering && <span className="cursor-text text-TextoMedianoPhone md:text-TextoGrande text-whiteBackground">View</span>}
+    <div
+      ref={curs}
+      className="cursor-none stroke-none pointer-events-none fixed rounded-full transform -translate-x-1/2 -translate-y-1/2 bg-primary h-3 w-3"
+      style={{
+        left: `${x}px`,
+        top: `${y}px`,
+        position: "fixed", 
+        zIndex: "9999", 
+      }}
+    >
+      <div
+        ref={textView}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          color: "#fff",
+          fontSize: "18px", 
+          fontWeight: "300", 
+          opacity: 0,
+          transition: "opacity 0.3s",
+        }}
+      >
+        View
       </div>
-    </>
+    </div>
   );
-};
-
-export default Cursor;
+}
