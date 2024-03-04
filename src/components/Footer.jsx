@@ -1,4 +1,4 @@
-import ArrowIcon from '../assets/images/arrow.svg';
+import SignatureIcon from '../assets/images/signature.svg';
 import UpButton from '../UI/UpButton';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="relative flex flex-col items-center justify-center pt-8 md:pt-16">
       <div className="flex flex-col items-center">
         <img
-          src={ArrowIcon}
+          src={SignatureIcon}
           alt="Firma Icon"
           className="w-36 h-auto md:w-80 mb-1 md:mb-2"
         />
