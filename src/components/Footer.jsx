@@ -1,4 +1,4 @@
-import Firma from '../assets/images/firma.png';
+import Firma from '../assets/images/firma';
 import UpButton from '../UI/UpButton';
 
 const Footer = () => {
