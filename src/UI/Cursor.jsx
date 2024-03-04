@@ -41,7 +41,9 @@ export default function Cursor() {
 
   const { x, y } = cursor;
 
-  return (
+  const shouldRenderCursor = window.innerWidth > 768; 
+
+  return shouldRenderCursor ? (
     <div
       ref={curs}
       className="cursor-none stroke-none pointer-events-none fixed rounded-full transform -translate-x-1/2 -translate-y-1/2 bg-primary h-3 w-3"
@@ -69,5 +71,5 @@ export default function Cursor() {
         View
       </div>
     </div>
-  );
+  ) : null;
 }
