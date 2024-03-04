@@ -7,22 +7,19 @@ export default function Cursor() {
   const textView = useRef(null);
 
   useEffect(() => {
-    const images = document.querySelectorAll(".imagePrototype");
+    const elementsWithEffect = document.querySelectorAll(".imagePrototype, .firmaEffect");
 
     const tl = gsap.timeline({ paused: true });
 
-    tl.to(curs.current, { height: "56px", width: "56px", ease: "expo.inout" }).to(
-      textView.current,
-      { opacity: 1, ease: "expo.inout" },
-      0
-    );
+    tl.to(curs.current, { height: "56px", width: "56px", ease: "expo.inout" })
+      .to(textView.current, { opacity: 1, ease: "expo.inout" }, 0);
 
-    images.forEach((img) => {
-      img.addEventListener("mouseenter", function () {
+    elementsWithEffect.forEach((element) => {
+      element.addEventListener("mouseenter", function () {
         tl.play();
       });
 
-      img.addEventListener("mouseleave", function () {
+      element.addEventListener("mouseleave", function () {
         tl.reverse();
         tl.eventCallback("onReverseComplete", function () {
           gsap.set(curs.current, { height: "12px", width: "12px" });
@@ -51,8 +48,8 @@ export default function Cursor() {
       style={{
         left: `${x}px`,
         top: `${y}px`,
-        position: "fixed", 
-        zIndex: "9999", 
+        position: "fixed",
+        zIndex: "9999",
       }}
     >
       <div
@@ -63,8 +60,8 @@ export default function Cursor() {
           left: "50%",
           transform: "translate(-50%, -50%)",
           color: "#fff",
-          fontSize: "18px", 
-          fontWeight: "300", 
+          fontSize: "18px",
+          fontWeight: "300",
           opacity: 0,
           transition: "opacity 0.3s",
         }}
