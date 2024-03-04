@@ -10,6 +10,14 @@ const Cursor = () => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
+    document.addEventListener('mousemove', updateCursorPosition);
+
+    return () => {
+      document.removeEventListener('mousemove', updateCursorPosition);
+    };
+  }, []); // Dependencia vacía para ejecutarse solo una vez
+
+  useEffect(() => {
     const handleHover = () => {
       setIsHovering(true);
     };
@@ -18,17 +26,15 @@ const Cursor = () => {
       setIsHovering(false);
     };
 
-    document.addEventListener('mousemove', updateCursorPosition);
+    const newImagePrototypeRefs = document.querySelectorAll('.imagePrototype');
 
-    document.querySelectorAll('.imagePrototype').forEach((el) => {
+    newImagePrototypeRefs.forEach((el) => {
       el.addEventListener('mouseenter', handleHover);
       el.addEventListener('mouseleave', handleLeave);
     });
 
     return () => {
-      document.removeEventListener('mousemove', updateCursorPosition);
-
-      document.querySelectorAll('.imagePrototype').forEach((el) => {
+      newImagePrototypeRefs.forEach((el) => {
         el.removeEventListener('mouseenter', handleHover);
         el.removeEventListener('mouseleave', handleLeave);
       });
@@ -44,8 +50,8 @@ const Cursor = () => {
           }
 
           .cursor {
-            width: ${isHovering ? '80px' : '20px'}; 
-            height: ${isHovering ? '80px' : '20px'}; 
+            width: ${isHovering ? '80px' : '20px'};
+            height: ${isHovering ? '80px' : '20px'};
             background-color: #10BFBF;
             border-radius: 50%;
             mix-blend-mode: difference;
@@ -55,13 +61,13 @@ const Cursor = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out; 
+            transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
           }
 
           .cursor-text {
             font-family: 'Manrope', sans-serif;
             font-size: ${isHovering ? '20px' : '12px'};
-            color: #fff;
+            color: #000;
             text-align: center;
             white-space: nowrap;
             transition: font-size 0.2s ease-out;
@@ -69,11 +75,11 @@ const Cursor = () => {
 
           @media only screen and (max-width: 767px) {
             body {
-              cursor: auto; 
+              cursor: auto;
             }
-            
+
             .cursor {
-              display: none; 
+              display: none;
             }
           }
         `}

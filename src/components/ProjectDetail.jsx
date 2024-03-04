@@ -3,9 +3,11 @@ import Dataprojects from '../Dataprojects';
 import Navbar from './Navbar';
 import Divider from '../UI/Divider';
 import Copyright from './Copyright';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Cursor from '../UI/Cursor';
 
 const ProjectDetail = () => {
+  const [isHovering, setIsHovering] = useState(false);
   const { projectTitle } = useParams();
   const project = Dataprojects.find((project) => project.title.toLowerCase() === projectTitle);
   const textRef = useRef(null);
@@ -80,11 +82,24 @@ const ProjectDetail = () => {
         </div>
 
         <div className="imagePrototype">
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <img src={project.imagePrototype} alt={`${project.title}`} className="max-w-full" />
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="imagePrototype"
+            onMouseOver={() => setIsHovering(true)}
+            onMouseOut={() => setIsHovering(false)}
+          >
+            <img
+              src={project.imagePrototype}
+              alt={`${project.title}`}
+              className="max-w-full imagePrototype"
+            />
           </a>
         </div>
-      </div>
+
+        <Cursor isHovering={isHovering} />
+        </div>
 
       <Copyright />
     </div>
