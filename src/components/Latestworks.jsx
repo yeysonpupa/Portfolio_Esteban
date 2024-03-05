@@ -4,7 +4,9 @@ import { useState } from 'react';
 import Cursor from '../UI/Cursor';
 
 const LatestWorks = () => {
+
     const [isHovering, setIsHovering] = useState(false);
+    const [isHoveringSee, setIsHoveringSee] = useState(false);
     const [hoveredImage1, setHoveredImage1] = useState(false);
     const [hoveredImage2, setHoveredImage2] = useState(false);
     const [hoveredImage3, setHoveredImage3] = useState(false);
@@ -30,8 +32,13 @@ const LatestWorks = () => {
                 <Link
                     to="/projects"
                     className="navCur font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText"
-                    onMouseOver={() => setIsHovering(true)}
-                    onMouseOut={() => setIsHovering(false)}>
+                    onMouseOver={() => setIsHoveringSee(true)}
+                    onMouseOut={() => setIsHoveringSee(false)}
+                    style={{
+                        transition: 'color 1s ease-in-out, text-decoration 1s ease-in-out',
+                        textDecoration: isHoveringSee ? 'underline' : 'none',
+                        color: isHoveringSee ? 'black' : 'inherit',
+                    }}>
                         See All
                 </Link>
             </div>
@@ -44,16 +51,18 @@ const LatestWorks = () => {
                             overflow: 'hidden',
                         }}
                     >
-                        <img
-                            src={Dataprojects[1].imageThumbnail}
-                            alt={Dataprojects[1].title}
-                            className="w-full h-full flex-1 imagePrototype"
-                            style={{ objectFit: 'cover', transform: `scale(${hoveredImage1 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
-                            onMouseEnter={handleHoverImage1}
-                            onMouseLeave={handleHoverImage1}
-                            onMouseOver={() => setIsHovering(true)}
-                            onMouseOut={() => setIsHovering(false)}
-                        />
+                        <Link to={`/projects/${Dataprojects[1].title.toLowerCase()}`}>
+                            <img
+                                src={Dataprojects[1].imageThumbnail}
+                                alt={Dataprojects[1].title}
+                                className="w-full h-full flex-1 imagePrototype"
+                                style={{ objectFit: 'cover', transform: `scale(${hoveredImage1 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
+                                onMouseEnter={handleHoverImage1}
+                                onMouseLeave={handleHoverImage1}
+                                onMouseOver={() => setIsHovering(true)}
+                                onMouseOut={() => setIsHovering(false)}
+                            />
+                        </Link>
                     </div>
                     <Cursor isHovering={isHovering} />
                     <div className="flex items-center justify-between">
@@ -70,15 +79,17 @@ const LatestWorks = () => {
                             overflow: 'hidden',
                             }}
                         >
-                            <img 
-                                src={Dataprojects[4].imageThumbnail} alt={Dataprojects[4].title} 
-                                className="w-full max-h-full md:max-h-56 imagePrototype" 
-                                style={{objectFit: 'cover', transform: `scale(${hoveredImage2 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
-                                onMouseEnter={handleHoverImage2}
-                                onMouseLeave={handleHoverImage2}
-                                onMouseOver={() => setIsHovering(true)}
-                                onMouseOut={() => setIsHovering(false)}
-                            />
+                            <Link to={`/projects/${Dataprojects[4].title.toLowerCase()}`}>
+                                <img 
+                                    src={Dataprojects[4].imageThumbnail} alt={Dataprojects[4].title} 
+                                    className="w-full max-h-full md:max-h-56 imagePrototype" 
+                                    style={{objectFit: 'cover', transform: `scale(${hoveredImage2 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
+                                    onMouseEnter={handleHoverImage2}
+                                    onMouseLeave={handleHoverImage2}
+                                    onMouseOver={() => setIsHovering(true)}
+                                    onMouseOut={() => setIsHovering(false)}
+                                />
+                            </Link>
                         </div>
                     </div>
 
@@ -97,16 +108,18 @@ const LatestWorks = () => {
                                     overflow: 'hidden',
                                     }}
                                  >
-                                    <img 
-                                        src={Dataprojects[0].imageThumbnail}
-                                        alt={Dataprojects[0].title} 
-                                        className="w-full max-h-full md:max-h-56 imagePrototype" 
-                                        style={{objectFit: 'cover', transform: `scale(${hoveredImage3 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
-                                        onMouseEnter={handleHoverImage3}
-                                        onMouseLeave={handleHoverImage3}
-                                        onMouseOver={() => setIsHovering(true)}
-                                        onMouseOut={() => setIsHovering(false)}
-                                    />
+                                    <Link to={`/projects/${Dataprojects[0].title.toLowerCase()}`}>
+                                        <img 
+                                            src={Dataprojects[0].imageThumbnail}
+                                            alt={Dataprojects[0].title} 
+                                            className="w-full max-h-full md:max-h-56 imagePrototype" 
+                                            style={{objectFit: 'cover', transform: `scale(${hoveredImage3 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
+                                            onMouseEnter={handleHoverImage3}
+                                            onMouseLeave={handleHoverImage3}
+                                            onMouseOver={() => setIsHovering(true)}
+                                            onMouseOut={() => setIsHovering(false)}
+                                        /> 
+                                    </Link>
                                 </div>
                             </div>
 

@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center pt-8 md:pt-16">
-    <Cursor isHovering={isHovering} />
+      <Cursor isHovering={isHovering} />
       <div className="flex flex-col items-center">
         <img
           src={SignatureIcon}
@@ -22,11 +22,19 @@ const Footer = () => {
           <span className="text-primary font-manrope text-TextoMedianoPhone md:text-TituloNormal">!</span>
         </h1>
 
-        <p 
-        className="navCur text-TextoNormal md:text-TextoGrande text-blackText font-manrope mb-4 md:mb-8"
-        onMouseOver={() => setIsHovering(true)}
-        onMouseOut={() => setIsHovering(false)}>
-          <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
+        <p className="navCur text-TextoNormal md:text-TextoGrande font-manrope mb-4 md:mb-8">
+          <a
+            href={`mailto:${emailAddress}`}
+            style={{
+              transition: 'color 1s ease-in-out, text-decoration 1s ease-in-out',
+              textDecoration: isHovering ? 'underline' : 'none',
+              color: isHovering ? 'black' : 'inherit',
+            }}
+            onMouseOver={() => setIsHovering(true)}
+            onMouseOut={() => setIsHovering(false)}
+          >
+            {emailAddress}
+          </a>
         </p>
       </div>
 
