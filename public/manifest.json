@@ -4,8 +4,8 @@
     "description": "By Esteban Pulido",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
+    "background_color": "transparent",
+    "theme_color": "transparent",
     "icons": [
       {
         "src": "./logo.svg",
