@@ -1,11 +1,15 @@
+import { useState } from 'react';
 import SignatureIcon from '../assets/images/signature.svg';
+import Cursor from '../UI/Cursor';
 import UpButton from '../UI/UpButton';
 
 const Footer = () => {
+  const [isHovering, setIsHovering] = useState(false);
   const emailAddress = 'estebanpulidodev@gmail.com';
 
   return (
     <div className="relative flex flex-col items-center justify-center pt-8 md:pt-16">
+    <Cursor isHovering={isHovering} />
       <div className="flex flex-col items-center">
         <img
           src={SignatureIcon}
@@ -18,7 +22,10 @@ const Footer = () => {
           <span className="text-primary font-manrope text-TextoMedianoPhone md:text-TituloNormal">!</span>
         </h1>
 
-        <p className="text-TextoNormal md:text-TextoGrande text-blackText font-manrope mb-4 md:mb-8">
+        <p 
+        className="navCur text-TextoNormal md:text-TextoGrande text-blackText font-manrope mb-4 md:mb-8"
+        onMouseOver={() => setIsHovering(true)}
+        onMouseOut={() => setIsHovering(false)}>
           <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
         </p>
       </div>

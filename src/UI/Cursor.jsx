@@ -7,11 +7,21 @@ export default function Cursor() {
   const textView = useRef(null);
 
   useEffect(() => {
+    const handleLinkClick = () => {
+      gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1" });
+    };
+
+    const navLinks = document.querySelectorAll('.navCur');
+    navLinks.forEach((link) => {
+      link.addEventListener('mousedown', handleLinkClick);
+    });
+
     const elementsWithEffect = document.querySelectorAll(".imagePrototype, .firmaEffect");
+    const navCurElements = document.querySelectorAll(".navCur");
 
     const tl = gsap.timeline({ paused: true });
 
-    tl.to(curs.current, { height: "56px", width: "56px", ease: "expo.inout", opacity: "1"})
+    tl.to(curs.current, { height: "56px", width: "56px", ease: "expo.inout", opacity: "1" })
       .to(textView.current, { opacity: 1, ease: "expo.inout" }, 0);
 
     elementsWithEffect.forEach((element) => {
@@ -30,20 +40,39 @@ export default function Cursor() {
       });
     });
 
+    navCurElements.forEach((element) => {
+      element.addEventListener("mouseenter", function () {
+        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "1" });
+      });
+
+      element.addEventListener("mouseleave", function () {
+        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1" });
+      });
+    });
+
     function moveCursor(e) {
-      setCursor((prevCursor) => ({ ...prevCursor, x: e.pageX, y: e.pageY - window.scrollY }));
+      const maxX = window.innerWidth - curs.current.offsetWidth;
+      const maxY = window.innerHeight - curs.current.offsetHeight;
+
+      const newX = Math.min(Math.max(e.pageX, 0), maxX);
+      const newY = Math.min(Math.max(e.pageY - window.scrollY, 0), maxY);
+
+      setCursor((prevCursor) => ({ ...prevCursor, x: newX, y: newY }));
     }
 
     document.addEventListener("mousemove", moveCursor);
 
     return () => {
       document.removeEventListener("mousemove", moveCursor);
+      navLinks.forEach((link) => {
+        link.removeEventListener('mousedown', handleLinkClick);
+      });
     };
   }, []);
 
   const { x, y, isNormal } = cursor;
 
-  const shouldRenderCursor = window.innerWidth > 768; 
+  const shouldRenderCursor = window.innerWidth > 768;
 
   return shouldRenderCursor ? (
     <div

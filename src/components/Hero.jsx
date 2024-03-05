@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import ArrowIcon from '../assets/images/arrow.svg';
+import Cursor from '../UI/Cursor';
 
 const Hero = () => {
+  const [isHovering, setIsHovering] = useState(false);
   const [dynamicText, setDynamicText] = useState('');
   const words = ['Creating', 'Dreaming', 'Coding'];
   const [wordIndex, setWordIndex] = useState(0);
@@ -37,6 +39,7 @@ const Hero = () => {
 
   return (
     <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-8 bg-whiteBackground">
+      <Cursor isHovering={isHovering} />
       <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText ml-1">
         Hello there! I am Esteban Pulido
       </p>
@@ -98,7 +101,9 @@ const Hero = () => {
           href="https://www.linkedin.com/in/yeyson-esteban-pulido-parra/"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground mb-2 font-manrope cursor-none"
+          className="navCur border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground mb-2 font-manrope cursor-none"
+          onMouseOver={() => setIsHovering(true)}
+          onMouseOut={() => setIsHovering(false)}
         >
           LinkedIn
         </a>
@@ -107,7 +112,9 @@ const Hero = () => {
           href="https://www.canva.com/design/DAFSPevxb6A/DpW_9JhzD4FeUvml77xuOg/view?"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground font-manrope cursor-none"
+          className="navCur border-2 border-primary text-blackText text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-whiteBackground font-manrope cursor-none"
+          onMouseOver={() => setIsHovering(true)}
+          onMouseOut={() => setIsHovering(false)}
         >
           Resume
         </a>

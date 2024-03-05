@@ -27,8 +27,12 @@ const LatestWorks = () => {
                 <p className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText">
                     Latest Projects<span className="text-TextoMedianoPhone md:text-TituloNormal text-primary font-museomoderno">.</span>
                 </p>
-                <Link to="/projects" className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">
-                    See All
+                <Link
+                    to="/projects"
+                    className="navCur font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText"
+                    onMouseOver={() => setIsHovering(true)}
+                    onMouseOut={() => setIsHovering(false)}>
+                        See All
                 </Link>
             </div>
 
