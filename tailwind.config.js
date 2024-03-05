@@ -35,6 +35,7 @@ export default {
         'blackText': '#1E1E1E',
         'whiteBackground': '#FCF9F9',
         'greyText': '#818181',
+        'contrary': "#10BFBF",
       },
     }
   },

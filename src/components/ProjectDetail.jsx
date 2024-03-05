@@ -41,7 +41,9 @@ const ProjectDetail = () => {
       <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-4 bg-whiteBackground">
         <div className="grid grid-cols-1 md:grid-cols-3 bg-whiteBackground mb-4 md:mb-8">
           <div ref={textRef} className="mb-4 md:mb-0 col-span-2">
+          <div>
             <h1 className="font-manrope text-TituloExtraGrandePhone md:text-TituloGrande text-blackText">{project.title}</h1>
+          </div>
             <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">
               Year
             </p>
