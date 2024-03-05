@@ -32,8 +32,8 @@ const LatestWorks = () => {
                 </Link>
             </div>
 
-            <div className="flex mt-4 md:mt-8">
-                <div className="w-1/2 pr-4 flex flex-col">
+            <div className="flex flex-col mt-4 md:flex-row md:mt-8">
+                <div className="w-full md:w-1/2 pr-0 md:pr-4 pb-4 md:pb-0 flex flex-col">
                     <div
                         className="relative h-full mb-2 imagePrototype"
                         style={{
@@ -44,7 +44,7 @@ const LatestWorks = () => {
                             src={Dataprojects[1].imageThumbnail}
                             alt={Dataprojects[1].title}
                             className="w-full h-full flex-1 imagePrototype"
-                            style={{ objectFit: 'cover', maxHeight: '100%', transform: `scale(${hoveredImage1 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
+                            style={{ objectFit: 'cover', transform: `scale(${hoveredImage1 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
                             onMouseEnter={handleHoverImage1}
                             onMouseLeave={handleHoverImage1}
                             onMouseOver={() => setIsHovering(true)}
@@ -58,7 +58,7 @@ const LatestWorks = () => {
                     </div>
                 </div>
 
-                <div className="w-1/2 pl-4 flex flex-col">
+                <div className="w-full md:w-1/2 pl-0 md:pl-4 flex flex-col">
                     <div className="mb-2 flex-1 imagePrototype">
                         <div
                             className="relative h-full imagePrototype"
@@ -68,8 +68,8 @@ const LatestWorks = () => {
                         >
                             <img 
                                 src={Dataprojects[4].imageThumbnail} alt={Dataprojects[4].title} 
-                                className="w-full h-full imagePrototype" 
-                                style={{objectFit: 'cover', maxHeight: '200px', transform: `scale(${hoveredImage2 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
+                                className="w-full max-h-full md:max-h-56 imagePrototype" 
+                                style={{objectFit: 'cover', transform: `scale(${hoveredImage2 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
                                 onMouseEnter={handleHoverImage2}
                                 onMouseLeave={handleHoverImage2}
                                 onMouseOver={() => setIsHovering(true)}
@@ -96,8 +96,8 @@ const LatestWorks = () => {
                                     <img 
                                         src={Dataprojects[0].imageThumbnail}
                                         alt={Dataprojects[0].title} 
-                                        className="w-full h-full imagePrototype" 
-                                        style={{objectFit: 'cover', maxHeight: '200px', transform: `scale(${hoveredImage3 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
+                                        className="w-full max-h-full md:max-h-56 imagePrototype" 
+                                        style={{objectFit: 'cover', transform: `scale(${hoveredImage3 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
                                         onMouseEnter={handleHoverImage3}
                                         onMouseLeave={handleHoverImage3}
                                         onMouseOver={() => setIsHovering(true)}
