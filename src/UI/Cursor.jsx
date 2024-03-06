@@ -8,7 +8,7 @@ export default function Cursor() {
 
   useEffect(() => {
     const handleLinkClick = () => {
-      gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1" });
+      gsap.to(curs.current, { height: "15px", width: "15px", opacity: "0" });
     };
 
     const navLinks = document.querySelectorAll('.navCur');
@@ -33,7 +33,7 @@ export default function Cursor() {
       element.addEventListener("mouseleave", function () {
         tl.reverse();
         tl.eventCallback("onReverseComplete", function () {
-          gsap.set(curs.current, { height: "15px", width: "15px", opacity: "0.5" });
+          gsap.set(curs.current, { height: "15px", width: "15px", opacity: "1" });
           gsap.set(textView.current, { opacity: 0 });
           setCursor((prevCursor) => ({ ...prevCursor, isNormal: true }));
         });
@@ -42,24 +42,22 @@ export default function Cursor() {
 
     navCurElements.forEach((element) => {
       element.addEventListener("mouseenter", function () {
-        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "0.5" });
+        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "1" });
       });
 
       element.addEventListener("mouseleave", function () {
-        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "0.5" });
+        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1" });
       });
     });
 
     function moveCursor(e) {
-      if (curs.current) {
-        const maxX = window.innerWidth - curs.current.offsetWidth;
-        const maxY = window.innerHeight - curs.current.offsetHeight;
-    
-        const newX = Math.min(Math.max(e.pageX, 0), maxX);
-        const newY = Math.min(Math.max(e.pageY - window.scrollY, 0), maxY);
-    
-        setCursor((prevCursor) => ({ ...prevCursor, x: newX, y: newY }));
-      }
+      const maxX = window.innerWidth - curs.current.offsetWidth;
+      const maxY = window.innerHeight - curs.current.offsetHeight;
+
+      const newX = Math.min(Math.max(e.pageX, 0), maxX);
+      const newY = Math.min(Math.max(e.pageY - window.scrollY, 0), maxY);
+
+      setCursor((prevCursor) => ({ ...prevCursor, x: newX, y: newY }));
     }
 
     document.addEventListener("mousemove", moveCursor);
@@ -72,20 +70,19 @@ export default function Cursor() {
     };
   }, []);
 
-  const { x, y, isNormal } = cursor;
+  const { x, y } = cursor;
 
   const shouldRenderCursor = window.innerWidth > 768;
 
   return shouldRenderCursor ? (
     <div
       ref={curs}
-      className={`cursor-none stroke-none pointer-events-none fixed rounded-full transform -translate-x-1/2 -translate-y-1/2 bg-primary h-3 w-3 ${isNormal ? "cursor-normal" : ""}`}
+      className={`cursor-none stroke-none pointer-events-none opaciti-1 fixed rounded-full transform -translate-x-1/2 -translate-y-1/2 bg-primary h-3 w-3`}
       style={{
         left: `${x}px`,
         top: `${y}px`,
         position: "fixed",
         zIndex: "9999",
-        mixBlendMode: isNormal ? "multiply" : "normal",
       }}
     >
       <div
