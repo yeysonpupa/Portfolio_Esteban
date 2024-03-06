@@ -32,11 +32,18 @@ const ProjectsMenu = () => {
             onMouseEnter={() => handleHoverProject(project)}
             onMouseLeave={handleLeaveProject}
           >
-          <div className={`navCur cursor-none font-manrope ${hoveredProject ? 'text-TituloNormal md:text-TituloGrande text-whiteBackground' : 'text-TituloNormal md:text-TituloGrande text-blackText'} font-medium leading-none pb-8 ${index !== Dataprojects.length - 1 ? 'mb-6 md:mb-28' : ''}`} style={{ fontWeight: hoveredProject === project ? 'bold' : 'normal', opacity: hoveredProject ? (hoveredProject === project ? 1 : 0.50) : 1 }}>
-            {project.title}
-          </div>
+            <div className={`imagePrototype cursor-none font-manrope ${hoveredProject ? 'text-TituloNormal md:text-TituloGrande text-whiteBackground' : 'text-TituloNormal md:text-TituloGrande text-blackText'} font-medium leading-none pb-8 ${index !== Dataprojects.length - 1 ? 'mb-6 md:mb-28' : ''}`} style={{ fontWeight: hoveredProject === project ? 'bold' : 'normal', opacity: hoveredProject ? (hoveredProject === project ? 1 : 0.50) : 1 }}>
+              {project.title}
+            </div>
           </Link>
         ))}
+        {hoveredProject && (
+          <div className="fixed bottom-0 right-0 pr-8 md:pr-16 pb-4">
+            <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-whiteBackground">
+              {hoveredProject.typeproject}
+            </p>
+          </div>
+        )}
       </div>
       <Copyright />
     </div>
