@@ -1,15 +1,9 @@
-import Divider from "../UI/Divider";
-import Copyright from "../components/Copyright";
-import Navbar from "../components/Navbar";
 import ProjectsMenu from "../components/ProjectsMenu";
 
 const Projects = () => {
     return (
-      <div className="bg-whiteBackground">
-        <Navbar/>
-        <Divider />
+      <div className="bg-blackText">
         <ProjectsMenu />
-        <Copyright />
       </div> 
     );
 };

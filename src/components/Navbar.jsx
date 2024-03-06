@@ -52,7 +52,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`pr-8 pl-8 pt-2 pb-2 md:pr-16 md:pl-16 md:pt-4 md:pb-4 flex justify-between items-center relative ${
+      className={`z-10 pr-8 pl-8 pt-2 pb-2 md:pr-16 md:pl-16 md:pt-4 md:pb-4 flex justify-between items-center relative ${
         isMenuOpen ? 'bg-whiteBackground fixed top-0 left-0 right-0 bottom-0 z-50' : ''
       }`}
     >
