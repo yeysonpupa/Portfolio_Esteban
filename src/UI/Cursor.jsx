@@ -33,7 +33,7 @@ export default function Cursor() {
       element.addEventListener("mouseleave", function () {
         tl.reverse();
         tl.eventCallback("onReverseComplete", function () {
-          gsap.set(curs.current, { height: "15px", width: "15px", opacity: "1" });
+          gsap.set(curs.current, { height: "15px", width: "15px", opacity: "0.5" });
           gsap.set(textView.current, { opacity: 0 });
           setCursor((prevCursor) => ({ ...prevCursor, isNormal: true }));
         });
@@ -42,11 +42,11 @@ export default function Cursor() {
 
     navCurElements.forEach((element) => {
       element.addEventListener("mouseenter", function () {
-        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "1" });
+        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "0.5" });
       });
 
       element.addEventListener("mouseleave", function () {
-        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1" });
+        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "0.5" });
       });
     });
 
