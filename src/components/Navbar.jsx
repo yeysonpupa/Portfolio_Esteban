@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Cursor from '../UI/Cursor';
 
-const Navbar = () => {
+const Navbar = ({ navbarTextColor }) => {
   const [isHovering, setIsHovering] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hovered, setHovered] = useState(null);
@@ -58,10 +58,10 @@ const Navbar = () => {
     >
       <div>
         <Cursor isHovering={isHovering} />
-        <Link to="/" className="navCur cursor-none" onClick={closeMenu} onMouseOver={() => setIsHovering(true)} onMouseOut={() => setIsHovering(false)}>
-          <span className="text-TextoMedianoPhone md:text-TextoGrande text-blackText font-museomoderno font-light">{`{Esteban`}</span>
-          <span className="text-TextoMedianoPhone md:text-TextoGrande text-primary font-museomoderno font-light">.</span>
-          <span className="text-TextoMedianoPhone md:text-TextoGrande text-blackText font-museomoderno font-light">{`}`}</span>
+        <Link to="/" className={`navCur cursor-none`} onClick={closeMenu} onMouseOver={() => setIsHovering(true)} onMouseOut={() => setIsHovering(false)}>
+        <span className={`text-TextoMedianoPhone md:text-TextoGrande font-museomoderno font-light ${navbarTextColor}`}>{`{Esteban`}</span>
+        <span className="text-TextoMedianoPhone md:text-TextoGrande text-primary font-museomoderno font-light">.</span>
+        <span className={`text-TextoMedianoPhone md:text-TextoGrande font-museomoderno font-light ${navbarTextColor}`}>{`}`}</span>
         </Link>
       </div>
       <div className="md:hidden">
@@ -110,7 +110,7 @@ const Navbar = () => {
           <div className="relative inline-flex items-center">
             <Link
               to="/projects"
-              className="navCur text-TextoNormal font-manrope text-blackText cursor-none"
+              className={`navCur text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
               onMouseEnter={() => handleMouseEnter('projects')}
               onMouseLeave={handleMouseLeave}
               onMouseOver={() => setIsHovering(true)}
@@ -123,7 +123,7 @@ const Navbar = () => {
           <div className="relative inline-flex items-center">
             <Link
               to="/about"
-              className="navCur text-TextoNormal font-manrope text-blackText cursor-none"
+              className={`navCur text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
               onMouseEnter={() => handleMouseEnter('about')}
               onMouseLeave={handleMouseLeave}
               onMouseOver={() => setIsHovering(true)}
@@ -136,7 +136,7 @@ const Navbar = () => {
           <div className="relative inline-flex items-center">
             <Link
               to="/snap"
-              className="navCur text-TextoNormal font-manrope text-blackText cursor-none"
+              className={`navCur text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
               onMouseEnter={() => handleMouseEnter('snap')}
               onMouseLeave={handleMouseLeave}
               onMouseOver={() => setIsHovering(true)}

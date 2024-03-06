@@ -22,7 +22,7 @@ export default function Cursor() {
     const tl = gsap.timeline({ paused: true });
 
     tl.to(curs.current, { height: "56px", width: "56px", ease: "expo.inout", opacity: "1" })
-      .to(textView.current, { opacity: 1, ease: "expo.inout" }, 0);
+      .to(textView.current?.style, { opacity: 1, ease: "expo.inout" }, 0);
 
     elementsWithEffect.forEach((element) => {
       element.addEventListener("mouseenter", function () {
@@ -51,14 +51,16 @@ export default function Cursor() {
     });
 
     function moveCursor(e) {
-      const maxX = window.innerWidth - curs.current.offsetWidth;
-      const maxY = window.innerHeight - curs.current.offsetHeight;
-
-      const newX = Math.min(Math.max(e.pageX, 0), maxX);
-      const newY = Math.min(Math.max(e.pageY - window.scrollY, 0), maxY);
-
-      setCursor((prevCursor) => ({ ...prevCursor, x: newX, y: newY }));
-    }
+      if (curs.current) {
+        const maxX = window.innerWidth - curs.current.offsetWidth;
+        const maxY = window.innerHeight - curs.current.offsetHeight;
+    
+        const newX = Math.min(Math.max(e.pageX, 0), maxX);
+        const newY = Math.min(Math.max(e.pageY - window.scrollY, 0), maxY);
+    
+        setCursor((prevCursor) => ({ ...prevCursor, x: newX, y: newY }));
+      }
+    }    
 
     document.addEventListener("mousemove", moveCursor);
 
