@@ -21,7 +21,7 @@ const ProjectsMenu = () => {
             onMouseEnter={() => setHoveredProject(project)}
             onMouseLeave={() => setHoveredProject(null)}
           >
-            <div className={`navCur cursor-none font-manrope ${hoveredProject ? 'text-TituloExtraGrandePhone md:text-TituloGrande text-whiteBackground' : 'text-TituloExtraGrandePhone md:text-TituloGrande text-blackText'} font-medium leading-none pb-8 ${index !== Dataprojects.length - 1 ? 'mb-6 md:mb-28' : ''}`} style={{ fontWeight: hoveredProject === project ? 'bold' : 'normal', opacity: hoveredProject ? (hoveredProject === project ? 1 : 0.50) : 1 }}>
+            <div className={`navCur cursor-none font-manrope ${hoveredProject ? 'text-TituloNormal md:text-TituloGrande text-whiteBackground' : 'text-TituloNormal md:text-TituloGrande text-blackText'} font-medium leading-none pb-8 ${index !== Dataprojects.length - 1 ? 'mb-6 md:mb-28' : ''}`} style={{ fontWeight: hoveredProject === project ? 'bold' : 'normal', opacity: hoveredProject ? (hoveredProject === project ? 1 : 0.50) : 1 }}>
               {project.title}
             </div>
           </Link>
