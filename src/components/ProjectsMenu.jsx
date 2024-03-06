@@ -23,7 +23,16 @@ const ProjectsMenu = () => {
     <div className={`principal ${hoveredProject ? 'bg-black' : 'bg-whiteBackground'}`}>
       <Navbar navbarTextColor={navbarTextColor} />
       <Divider />
-      <div className="bg-cover bg-center bg-no-repeat fixed top-0 left-0 w-full h-full opacity-70 z-0" style={{ backgroundImage: hoveredProject ? `url(${hoveredProject.imageThumbnail})` : 'none' }} />
+      <div
+        className="bg-cover bg-center bg-no-repeat fixed top-0 left-0 w-full h-full opacity-70 z-0"
+        style={{
+          backgroundImage: hoveredProject
+            ? `url(${hoveredProject.imageThumbnail})`
+            : 'none',
+          transition: 'opacity 1000ms ease',
+          opacity: hoveredProject ? 0.70 : 0,
+        }}
+      />
       <div className="flex flex-col items-center md:items-start justify-center pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 bg-transparent min-h-screen relative">
         {Dataprojects.map((project, index) => (
           <Link

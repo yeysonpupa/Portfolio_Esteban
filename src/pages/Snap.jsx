@@ -1,6 +1,7 @@
 import Divider from "../UI/Divider";
 import Copyright from "../components/Copyright";
 import Navbar from "../components/Navbar";
+import Photos from "../components/Photos";
 import SnapHero from "../components/SnapHero";
 
 const Snap = () => {
@@ -9,6 +10,7 @@ const Snap = () => {
         <Navbar />
         <Divider />
         <SnapHero />
+        <Photos />
         <Copyright />
       </div>
     );
