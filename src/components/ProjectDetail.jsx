@@ -1,13 +1,11 @@
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Dataprojects from '../Dataprojects';
 import Navbar from './Navbar';
 import Divider from '../UI/Divider';
 import Copyright from './Copyright';
-import { useEffect, useRef, useState } from 'react';
-import Cursor from '../UI/Cursor';
+import { useEffect, useRef } from 'react';
 
 const ProjectDetail = () => {
-  const [isHovering, setIsHovering] = useState(false);
   const { projectTitle } = useParams();
   const project = Dataprojects.find((project) => project.title.toLowerCase() === projectTitle);
   const textRef = useRef(null);
@@ -22,7 +20,7 @@ const ProjectDetail = () => {
   }, [project]);
 
   if (!project) {
-    return <div>Proyecto no encontrado</div>;
+    return <Navigate to="/" />
   }
 
   const renderDescriptionWithLineBreaks = () => {
@@ -64,7 +62,7 @@ const ProjectDetail = () => {
             </p>
           </div>
 
-          <div className="relative flex justify-center items-center col-span-1">
+          <div className="relative flex justify-end items-center col-span-1">
             <img
               id="mainImage"
               src={project.imageMain}
@@ -89,20 +87,15 @@ const ProjectDetail = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="imagePrototype"
-            onMouseOver={() => setIsHovering(true)}
-            onMouseOut={() => setIsHovering(false)}
           >
             <img
               src={project.imagePrototype}
               alt={`${project.title}`}
-              className="max-w-full imagePrototype"
+              className="w-full imagePrototype"
             />
           </a>
         </div>
-
-        <Cursor isHovering={isHovering} />
-        </div>
-
+      </div>
       <Copyright />
     </div>
   );

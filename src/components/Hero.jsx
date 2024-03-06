@@ -52,17 +52,17 @@ const Hero = () => {
         <img
           src={ArrowIcon}
           alt="Arrow Icon"
-          className="w-15 h-15 pt-2 pl-2 pb-0 md:pt-10 md:pl-40 md:pb-5 transform scale-x-50 scale-y-50 md:scale-x-100 md:scale-y-100"
+          className="mr-0 md:mr-5 xl:ml-20 2xl:ml-0 2xl:mr-96 w-15 h-15 pt-2 pb-0 md:pt-10 md:pb-5 transform scale-x-50 scale-y-50 md:scale-x-100 md:scale-y-100"
         />
       </div>
 
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-end 2xl:justify-center md:ml-5 2xl:ml-96 xl:mr-10 2xl:mr-40">
         <p className="font-museomoderno text-TituloExtraGrandePhone md:text-TituloGrande text-blackText pt-5 pr-0 md:pt-11 md:pr-40 leading-6">
           UI/UX
         </p>
       </div>
 
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-end 2xl:justify-center md:ml-5 xl:ml-96 xl:mr-10 2xl:mr-0">
         <p className="text-TextoPequeñoPhone md:text-TextoNormal text-greyText font-manrope pt-5 pr-0 md:pt-10 md:pr-40 leading-none">
           and much more...
         </p>

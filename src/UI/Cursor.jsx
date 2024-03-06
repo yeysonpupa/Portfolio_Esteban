@@ -51,13 +51,15 @@ export default function Cursor() {
     });
 
     function moveCursor(e) {
-      const maxX = window.innerWidth - curs.current.offsetWidth;
-      const maxY = window.innerHeight - curs.current.offsetHeight;
-
-      const newX = Math.min(Math.max(e.pageX, 0), maxX);
-      const newY = Math.min(Math.max(e.pageY - window.scrollY, 0), maxY);
-
-      setCursor((prevCursor) => ({ ...prevCursor, x: newX, y: newY }));
+      if (curs.current) {
+        const maxX = window.innerWidth - curs.current.offsetWidth;
+        const maxY = window.innerHeight - curs.current.offsetHeight;
+    
+        const newX = Math.min(Math.max(e.pageX, 0), maxX);
+        const newY = Math.min(Math.max(e.pageY - window.scrollY, 0), maxY);
+    
+        setCursor((prevCursor) => ({ ...prevCursor, x: newX, y: newY }));
+      }
     }
 
     document.addEventListener("mousemove", moveCursor);
