@@ -42,12 +42,12 @@ const Photos = () => {
     return result;
   };
 
-  const galleryChunks = chunkArray(DataGallery, 6);
+  const galleryChunks = window.innerWidth >= 768 ? chunkArray(DataGallery, 6) : chunkArray(DataGallery, 9);
 
   return (
     <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-0 pb-8 bg-whiteBackground">
 
-      <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {galleryChunks.map((row, rowIndex) => (
           <div key={rowIndex} className="flex flex-col">
             {row.map((item, columnIndex) => (
@@ -63,7 +63,6 @@ const Photos = () => {
         ))}
       </div>
 
-      {/* Modal para mostrar la imagen en vista completa */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -73,8 +72,8 @@ const Photos = () => {
         overlayClassName="fixed inset-0 bg-black bg-opacity-70 opacity-1"
       >
         {selectedImage && (
-          <div className="text-right text-bold">
-            <button onClick={closeModal} className=" text-whiteBackground cursor-none mb-2">
+          <div className="text-right text-bold font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-whiteBackground">
+            <button onClick={closeModal} className=" cursor-none mb-2">
               <FontAwesomeIcon icon={faTimes} />
             </button>
             <img
@@ -85,7 +84,7 @@ const Photos = () => {
             />
           </div>
         )}
-      </Modal>
+        </Modal>
     </div>
   );
 };
