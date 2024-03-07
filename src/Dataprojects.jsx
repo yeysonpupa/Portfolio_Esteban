@@ -83,7 +83,7 @@ const Dataprojects = [
     year: '2023',
     client: 'CodeBits • Design challenge',
     myrole: 'UI/UX Designer',
-    description: 'GameHive is a design project that secured the first place in the 2023 Design Challenge, organized by the Faculty of Engineering at the University of La Sabana and hosted by the startup CodeBits. The challenge tasked various teams with creating an e-commerce website where passionate gamers could purchase their favorite titles. The prototype was presented to a panel of judges comprising the director of the computer engineering program and professors specializing in Web Development and Human-Centered Design.',
+    description: 'GameHive is a design project that secured the first place in the 2023 Design Challenge, organized by the Faculty of Engineering at the University of La Sabana and hosted by the startup CodeBits. The challenge tasked various teams with creating an e-commerce website where passionate gamers could purchase their favorite titles. The prototype was presented to a panel of judges comprising the director of the informatics engineering program and professors specializing in Web Development and Human-Centered Design.',
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: GameHiveThumbnail,
