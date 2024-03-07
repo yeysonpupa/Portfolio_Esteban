@@ -32,7 +32,7 @@ const Dataprojects = [
     year: '2023',
     client: 'Age Vía de Cuidados',
     myrole: 'UI/UX Designer',
-    description: 'AgeCuidados is on a mission to provide home care services delivered by healthcare professionals and compassionate caregivers dedicated to contributing through comprehensive medical, nursing, and home care services. For this project, a rebranding initiative was undertaken for Age Vía de Cuidados, aiming to integrate it seamlessly into the development of the high-fidelity prototype for the mobile application.',
+    description: 'This project facilitated contact with Age Vía de Cuidados, a startup with the mission of providing home care services delivered by healthcare professionals and compassionate caregivers dedicated to contributing through comprehensive medical, nursing, and home care services.\n\nTaking on the role of UI/UX designer, a branding initiative was undertaken for Age Vía de Cuidados, aiming to integrate a new identity that would drive the core of the business idea. This was further emphasized through the development of a high-fidelity prototype created in Figma.\n\nA complete process of designing digital wireframes, iterations with the client between low and high-fidelity prototypes, and delivering a comprehensive scheme of typography, colors, and interfaces was carried out.',
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: AgeCuidadosThumbnail,
