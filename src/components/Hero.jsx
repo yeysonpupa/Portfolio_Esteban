@@ -5,7 +5,7 @@ import Cursor from '../UI/Cursor';
 const Hero = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [dynamicText, setDynamicText] = useState('');
-  const words = ['Creating', 'Dreaming', 'Coding'];
+  const words = ['Create', 'Dream', 'Code'];
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const typingSpeed = 100;
@@ -69,7 +69,7 @@ const Hero = () => {
       </div>
 
       <p className="font-manrope text-TextoGrande pt-5 md:pt-0 md:text-TituloMediano text-blackText leading-tight">
-        What are we{' '}
+        What will we {' '}
         <br />
         <span
           className="blink-vertical cursor-line font-museomoderno-100 font-thin text-greyText"
