@@ -11,7 +11,7 @@ const LoaderMain = () => {
 
     const loadingTimeout = setTimeout(() => {
       clearInterval(interval);
-    }, 4000);
+    }, 2000);
 
     return () => {
       clearInterval(interval);
