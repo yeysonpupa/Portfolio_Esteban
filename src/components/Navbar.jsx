@@ -58,7 +58,7 @@ const Navbar = ({ navbarTextColor }) => {
     >
       <div>
         <Cursor isHovering={isHovering} />
-        <Link to="/" className={`navCur cursor-none`} onClick={closeMenu} onMouseOver={() => setIsHovering(true)} onMouseOut={() => setIsHovering(false)}>
+        <Link to="/" className={`nav cursor-none`} onClick={closeMenu} onMouseOver={() => setIsHovering(true)} onMouseOut={() => setIsHovering(false)}>
         <span className={`text-TextoMedianoPhone md:text-TextoGrande font-museomoderno font-light ${navbarTextColor}`}>{`{Esteban`}</span>
         <span className="text-TextoMedianoPhone md:text-TextoGrande text-primary font-museomoderno font-light">.</span>
         <span className={`text-TextoMedianoPhone md:text-TextoGrande font-museomoderno font-light ${navbarTextColor}`}>{`}`}</span>
@@ -100,7 +100,7 @@ const Navbar = ({ navbarTextColor }) => {
           <div className="relative inline-flex items-center">
             <Link
               to="/projects"
-              className={`navCur text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
+              className={`nav text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
               onMouseEnter={() => handleMouseEnter('projects')}
               onMouseLeave={handleMouseLeave}
               onMouseOver={() => setIsHovering(true)}
@@ -113,7 +113,7 @@ const Navbar = ({ navbarTextColor }) => {
           <div className="relative inline-flex items-center">
             <Link
               to="/about"
-              className={`navCur text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
+              className={`nav text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
               onMouseEnter={() => handleMouseEnter('about')}
               onMouseLeave={handleMouseLeave}
               onMouseOver={() => setIsHovering(true)}

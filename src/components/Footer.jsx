@@ -22,7 +22,7 @@ const Footer = () => {
           <span className="text-primary font-manrope text-TextoMedianoPhone md:text-TituloNormal">!</span>
         </h1>
 
-        <p className="navCur text-TextoNormal md:text-TextoGrande font-manrope mb-4 md:mb-8">
+        <p className="nav text-TextoNormal md:text-TextoGrande font-manrope mb-4 md:mb-8">
           <a
             href={`mailto:${emailAddress}`}
             style={{

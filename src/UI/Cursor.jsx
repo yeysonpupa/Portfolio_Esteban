@@ -16,8 +16,14 @@ export default function Cursor() {
       link.addEventListener('mousedown', handleLinkClick);
     });
 
+    const navLinksnav = document.querySelectorAll('.nav');
+    navLinksnav.forEach((link) => {
+      link.addEventListener('mousedown', handleLinkClick);
+    });
+
     const elementsWithEffect = document.querySelectorAll(".imagePrototype, .firmaEffect");
     const navCurElements = document.querySelectorAll(".navCur");
+    const navElements = document.querySelectorAll(".nav");
 
     const tl = gsap.timeline({ paused: true });
 
@@ -42,11 +48,21 @@ export default function Cursor() {
 
     navCurElements.forEach((element) => {
       element.addEventListener("mouseenter", function () {
-        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "1" });
+        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "0.5", backgroundColor: "#ffff" });
       });
 
       element.addEventListener("mouseleave", function () {
-        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1" });
+        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1", backgroundColor: "#EF4040" });
+      });
+    });
+
+    navElements.forEach((element) => {
+      element.addEventListener("mouseenter", function () {
+        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "0.5", backgroundColor: "#EF4040" });
+      });
+
+      element.addEventListener("mouseleave", function () {
+        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1", backgroundColor: "#EF4040" });
       });
     });
 

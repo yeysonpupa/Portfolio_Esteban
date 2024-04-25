@@ -28,7 +28,7 @@ const LatestWorks = () => {
                 </p>
                 <Link
                     to="/projects"
-                    className="navCur font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText"
+                    className="nav font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText"
                     onMouseOver={() => setIsHoveringSee(true)}
                     onMouseOut={() => setIsHoveringSee(false)}
                     style={{
