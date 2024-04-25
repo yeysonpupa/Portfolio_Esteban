@@ -1,41 +1,34 @@
 import AgeCuidadosThumbnail from '/src/assets/images/projects/AgeCuidados/AgeCuidadosThumbnail.png';
-import AgeCuidadosMain from '/src/assets/images/projects/AgeCuidados/AgeCuidadosMain.png';
 import AgeCuidadosPrototype from '/src/assets/images/projects/AgeCuidados/AgeCuidadosPrototype.png';
 import AgeCuidadosBanner from '/src/assets/images/projects/AgeCuidados/AgeCuidadosBanner.png';
 import AgeCuidadosQuote from '/src/assets/images/projects/AgeCuidados/AgeCuidadosQuote.png';
 
 import BenAIThumbnail from '/src/assets/images/projects/BenAI/BenAIThumbnail.png';
-import BenAIMain from '/src/assets/images/projects/BenAI/BenAIMain.png';
 import BenAIPrototype from '/src/assets/images/projects/BenAI/BenAIPrototype.png';
 import BenAIBanner from '/src/assets/images/projects/BenAI/BenAIBanner.png';
 import BenAIQuote from '/src/assets/images/projects/BenAI/BenAIQuote.png';
 
 import BombastikThumbnail from '/src/assets/images/projects/Bombastik/BombastikThumbnail.png';
-import BombastikMain from '/src/assets/images/projects/Bombastik/BombastikMain.png';
 import BombastikPrototype from '/src/assets/images/projects/Bombastik/BombastikPrototype.png';
 import BombastikBanner from '/src/assets/images/projects/Bombastik/BombastikBanner.png';
 import BombastikQuote from '/src/assets/images/projects/Bombastik/BombastikQuote.png';
 
 import DookuThumbnail from '/src/assets/images/projects/Dooku/DookuThumbnail.png';
-import DookuMain from '/src/assets/images/projects/Dooku/DookuMain.png';
 import DookuPrototype from '/src/assets/images/projects/Dooku/DookuPrototype.png';
 import DookuBanner from '/src/assets/images/projects/Dooku/DookuBanner.png';
 import DookuQuote from '/src/assets/images/projects/Dooku/DookuQuote.png';
 
 import GameHiveThumbnail from '/src/assets/images/projects/GameHive/GameHiveThumbnail.png';
-import GameHiveMain from '/src/assets/images/projects/GameHive/GameHiveMain.png';
 import GameHivePrototype from '/src/assets/images/projects/GameHive/GameHivePrototype.png';
 import GameHiveBanner from '/src/assets/images/projects/GameHive/GameHiveBanner.png';
 import GameHiveQuote from '/src/assets/images/projects/GameHive/GameHiveQuote.png';
 
 import MekaThumbnail from '/src/assets/images/projects/Meka/MekaThumbnail.png';
-import MekaMain from '/src/assets/images/projects/Meka/MekaMain.png';
 import MekaPrototype from '/src/assets/images/projects/Meka/MekaPrototype.png';
 import MekaBanner from '/src/assets/images/projects/Meka/MekaBanner.png';
 import MekaQuote from '/src/assets/images/projects/Meka/MekaQuote.png';
 
 import VrumThumbnail from '/src/assets/images/projects/Vrum/VrumThumbnail.png';
-import VrumMain from '/src/assets/images/projects/Vrum/VrumMain.png';
 import VrumPrototype from '/src/assets/images/projects/Vrum/VrumPrototype.png';
 import VrumBanner from '/src/assets/images/projects/Vrum/VrumBanner.png';
 import VrumQuote from '/src/assets/images/projects/Vrum/VrumQuote.png';
@@ -52,7 +45,6 @@ const Dataprojects = [
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: AgeCuidadosThumbnail,
-    imageMain: AgeCuidadosMain,
     imagePrototype: AgeCuidadosPrototype,
     imageBanner: AgeCuidadosBanner,
     imageQuote: AgeCuidadosQuote,
@@ -69,7 +61,6 @@ const Dataprojects = [
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: BenAIThumbnail,
-    imageMain: BenAIMain,
     imagePrototype: BenAIPrototype,
     imageBanner: BenAIBanner,
     imageQuote: BenAIQuote,
@@ -86,7 +77,6 @@ const Dataprojects = [
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: BombastikThumbnail,
-    imageMain: BombastikMain,
     imagePrototype: BombastikPrototype,
     imageBanner: BombastikBanner,
     imageQuote: BombastikQuote,
@@ -103,7 +93,6 @@ const Dataprojects = [
     tools: 'ReactJS • MongoDB • NodeJS',
     typeproject: 'Full-Stack Development',
     imageThumbnail: DookuThumbnail,
-    imageMain: DookuMain,
     imagePrototype: DookuPrototype,
     imageBanner: DookuBanner,
     imageQuote: DookuQuote,
@@ -120,7 +109,6 @@ const Dataprojects = [
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: GameHiveThumbnail,
-    imageMain: GameHiveMain,
     imagePrototype: GameHivePrototype,
     imageBanner: GameHiveBanner,
     imageQuote: GameHiveQuote,
@@ -137,7 +125,6 @@ const Dataprojects = [
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: MekaThumbnail,
-    imageMain: MekaMain,
     imagePrototype: MekaPrototype,
     imageBanner: MekaBanner,
     imageQuote: MekaQuote,
@@ -154,7 +141,6 @@ const Dataprojects = [
     tools: 'Figma',
     typeproject: 'UI/UX Design',
     imageThumbnail: VrumThumbnail,
-    imageMain: VrumMain,
     imagePrototype: VrumPrototype,
     imageBanner: VrumBanner,
     imageQuote: VrumQuote,
