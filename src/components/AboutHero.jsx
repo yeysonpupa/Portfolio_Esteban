@@ -11,39 +11,36 @@ const AboutHero = () => {
         Hello! I am <br />Esteban Pulido{' '}
         <span className="font-museomoderno text-TituloExtraGrandePhone md:text-TituloGrande text-primary">{`:)`}</span>
       </p>
-      <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
-        {`Concluding my informatics engineering degree and looking forward to immersing myself in professional internships, specifically emphasizing UI/UX and front-end development. I'm all about the attention to details, collaborative teamwork, and tackling challenges with a dash of critical thinking. Fluent in both Spanish and English, so let's make things happen!`}
-      </p>
 
-      <div className="flex flex-col md:flex-row pt-4 md:pt-8 pb-8">
-        <div className="pr-16 md:pr-32 mb-4 md:mb-0">
-          <div>
-            <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText text-justify">From</p>
-            <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">Bogotá, Colombia</p>
+      <div className="flex flex-col md:flex-row">
+        <div className="md:w-1/2 pr-0 md:pr-16">
+          <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
+            {`Concluding my informatics engineering degree and looking forward to immersing myself in professional internships, specifically emphasizing UI/UX and front-end development. I'm all about the attention to details, collaborative teamwork, and tackling challenges with a dash of critical thinking. Fluent in both Spanish and English, so let's make things happen!`}
+          </p>
+
+          <div className="pt-4 md:pt-8 pb-4 md:pb-8">
+            <div className="mb-2 md:mb-4">
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText text-justify">From</p>
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">Bogotá, Colombia</p>
+            </div>
+
+            <div className="mb-2 md:mb-4">
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">Currently</p>
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Informatics engineering student</p>
+            </div>
+
+            <div>
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">Passionate about</p>
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Technology • Digital Art • Photography</p>
+            </div>
           </div>
         </div>
 
-        <div className="pr-16 md:pr-32 mb-4 md:mb-0">
-          <div>
-            <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">Currently</p>
-            <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Informatics engineering student</p>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">Passionate about</p>
-            <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Technology • Digital Art • Photography</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full mb-4 md:mb-8 relative h-full">
+        <div className="md:w-1/2 relative">
           <img
-            id="MyPhotoBanner"
             src={MyPhoto}
-            className="w-full h-full"
-            style={{ objectFit: 'cover' }}
+            alt="Profile"
+            className="w-full h-full object-cover"
           />
           <a
             href="https://www.canva.com/design/DAF-xqdbyS0/tVsHEfDmDrOw9-rjhHnmQQ/view?utm_content=DAF-xqdbyS0&utm_campaign=designshare&utm_medium=link&utm_source=editor"
@@ -54,6 +51,7 @@ const AboutHero = () => {
             Resume
           </a>
         </div>
+      </div>
     </div>
   );
 };

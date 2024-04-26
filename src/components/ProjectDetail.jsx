@@ -1,4 +1,4 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import Dataprojects from '../Dataprojects';
 import Navbar from './Navbar';
 import Divider from '../UI/Divider';
@@ -7,7 +7,9 @@ import { useEffect, useRef } from 'react';
 
 const ProjectDetail = () => {
   const { projectTitle } = useParams();
-  const project = Dataprojects.find((project) => project.title.toLowerCase() === projectTitle);
+  const projectIndex = Dataprojects.findIndex((project) => project.title.toLowerCase() === projectTitle.toLowerCase());
+  const project = Dataprojects[projectIndex];
+  const nextProject = Dataprojects[(projectIndex + 1) % Dataprojects.length];
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -29,6 +31,20 @@ const ProjectDetail = () => {
         {paragraph}
       </p>
     ));
+  };
+
+  const renderNextProjectPreview = () => {
+    return (
+      <div className="mt-10 mb-20">
+        <h2 className="text-lg font-bold">Next Project</h2>
+        <Link to={`/projects/${nextProject.title.toLowerCase()}`} className="text-primary hover:underline">
+          <div className="flex items-center space-x-4">
+            <img src={nextProject.imageBanner} alt={nextProject.title} className="w-20 h-20 object-cover rounded" />
+            <span>{nextProject.title}</span>
+          </div>
+        </Link>
+      </div>
+    );
   };
 
   return (
@@ -133,6 +149,7 @@ const ProjectDetail = () => {
           </a>
         </div>
       </div>
+      {renderNextProjectPreview()} {/* Renderizar vista previa del siguiente proyecto */}
       <Copyright />
     </div>
   );
