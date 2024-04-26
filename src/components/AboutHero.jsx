@@ -38,11 +38,11 @@ const AboutHero = () => {
         </div>
       </div>
 
-      <div className="w-full mb-4 md:mb-8 relative h-48 md:h-full">
+      <div className="w-full mb-4 md:mb-8 relative h-full">
           <img
             id="MyPhotoBanner"
             src={MyPhoto}
-            className="w-full h-48 md:h-full"
+            className="w-full h-full"
             style={{ objectFit: 'cover' }}
           />
           <a
