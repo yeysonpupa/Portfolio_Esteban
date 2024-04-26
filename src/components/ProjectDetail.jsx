@@ -86,7 +86,7 @@ const ProjectDetail = () => {
             id="bannerImage"
             src={project.imageBanner}
             alt={`${project.title}`}
-            className="w-full h-full"
+            className="w-full h-48 md:h-full"
             style={{ objectFit: 'cover' }}
           />
           <a

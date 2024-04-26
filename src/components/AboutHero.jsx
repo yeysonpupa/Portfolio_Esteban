@@ -12,7 +12,7 @@ const AboutHero = () => {
         <span className="font-museomoderno text-TituloExtraGrandePhone md:text-TituloGrande text-primary">{`:)`}</span>
       </p>
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row pb-4 md:pb-8">
         <div className="md:w-1/2 pr-0 md:pr-16">
           <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
             {`Concluding my informatics engineering degree and looking forward to immersing myself in professional internships, specifically emphasizing UI/UX and front-end development. I'm all about the attention to details, collaborative teamwork, and tackling challenges with a dash of critical thinking. Fluent in both Spanish and English, so let's make things happen!`}
@@ -40,7 +40,7 @@ const AboutHero = () => {
           <img
             src={MyPhoto}
             alt="Profile"
-            className="w-full h-full object-cover"
+            className="w-full h-72 md:h-full object-cover"
           />
           <a
             href="https://www.canva.com/design/DAF-xqdbyS0/tVsHEfDmDrOw9-rjhHnmQQ/view?utm_content=DAF-xqdbyS0&utm_campaign=designshare&utm_medium=link&utm_source=editor"
