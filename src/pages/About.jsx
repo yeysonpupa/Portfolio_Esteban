@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Timeline from "../components/Timeline";
 import AboutHero from "../components/AboutHero";
+import GalleryAbout from "../components/GalleryAbout";
 
 const About = () => {
     return (
@@ -17,6 +18,7 @@ const About = () => {
         <BannerAbout />
         <Line />
         <Timeline />
+        <GalleryAbout />
         <Footer />
         <Copyright />
       </div>

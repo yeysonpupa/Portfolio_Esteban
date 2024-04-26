@@ -3,12 +3,9 @@ import Dataprojects from '../Dataprojects';
 import Navbar from './Navbar';
 import Divider from '../UI/Divider';
 import Copyright from './Copyright';
-import { useEffect, useRef, useState } from 'react';
-import Cursor from '../UI/Cursor';
+import { useEffect, useRef } from 'react';
 
 const ProjectDetail = () => {
-  const [isHovering, setIsHovering] = useState(false);
-
   const { projectTitle } = useParams();
   const project = Dataprojects.find((project) => project.title.toLowerCase() === projectTitle);
   const textRef = useRef(null);
@@ -39,7 +36,6 @@ const ProjectDetail = () => {
       <Navbar />
       <Divider />
       <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-4 bg-whiteBackground">
-      <Cursor isHovering={isHovering} />
         <div className="grid grid-cols-1 bg-whiteBackground mb-2 md:mb-4">
           <div ref={textRef} className="mb-2">
             <div>
@@ -82,8 +78,6 @@ const ProjectDetail = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="navCur border-2 border-primary bg-primary text-whiteBackground text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 font-manrope absolute bottom--1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-none"
-            onMouseOver={() => setIsHovering(true)}
-            onMouseOut={() => setIsHovering(false)}
           >
             Explore
           </a>
