@@ -73,7 +73,7 @@ const ProjectDetail = () => {
             id="bannerImage"
             src={project.imageBanner}
             alt={`${project.title}`}
-            className="w-full h-48 md:h-full"
+            className="w-full h-72 md:h-full"
             style={{ objectFit: 'cover' }}
           />
           <a
@@ -149,7 +149,7 @@ const ProjectDetail = () => {
           </div>
           <div className="flex-1 relative p-4 md:p-8">
               <Link to={`/projects/${nextProject.title.toLowerCase()}`} className="text-primary">
-                  <img src={nextProject.imageBanner} alt={nextProject.title} className="w-full h-48 md:h-full object-cover nav"/>
+                  <img src={nextProject.imageBanner} alt={nextProject.title} className="w-full h-72 md:h-full object-cover nav"/>
               </Link>
           </div>
         </div>
