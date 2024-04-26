@@ -38,7 +38,7 @@ const AboutHero = () => {
         </div>
       </div>
 
-      <div className="w-full mb-8 md:mb-8 relative h-48 md:h-full">
+      <div className="w-full mb-4 md:mb-8 relative h-48 md:h-full">
           <img
             id="MyPhotoBanner"
             src={MyPhoto}
