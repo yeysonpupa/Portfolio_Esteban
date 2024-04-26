@@ -1,3 +1,5 @@
+import MyPhoto from '../assets/images/MyPhoto.png';
+
 const AboutHero = () => {
   return (
     <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-8 bg-whiteBackground">
@@ -39,8 +41,7 @@ const AboutHero = () => {
       <div className="w-full mb-8 md:mb-8 relative h-48 md:h-full">
           <img
             id="MyPhotoBanner"
-            src="./src/assets/images/MyPhoto.png"
-            alt=""
+            src={MyPhoto}
             className="w-full h-48 md:h-full"
             style={{ objectFit: 'cover' }}
           />

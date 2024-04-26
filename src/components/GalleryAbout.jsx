@@ -1,3 +1,8 @@
+import AboutPhoto1 from '../assets/images/AboutPhoto1.png';
+import AboutPhoto2 from '../assets/images/AboutPhoto2.png';
+import AboutPhoto3 from '../assets/images/AboutPhoto3.png';
+import AboutPhoto4 from '../assets/images/AboutPhoto4.png';
+
 const GalleryAbout = () => {
     return (
         <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 bg-whiteBackground">
@@ -14,8 +19,7 @@ const GalleryAbout = () => {
                 <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-1">
                     <img
                     id="PhotoAbout1"
-                    src="./src/assets/images/AboutPhoto1.png"
-                    alt=""
+                    src={AboutPhoto1}
                     className="w-full h-full"
                     style={{ objectFit: 'cover' }}
                     />
@@ -24,8 +28,7 @@ const GalleryAbout = () => {
                 <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-1">
                     <img
                     id="PhotoAbout2"
-                    src="./src/assets/images/AboutPhoto2.png"
-                    alt=""
+                    src={AboutPhoto2}
                     className="w-full h-full"
                     style={{ objectFit: 'cover' }}
                     />
@@ -34,8 +37,7 @@ const GalleryAbout = () => {
                 <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-1 pt-8">
                     <img
                     id="PhotoAbout3"
-                    src="./src/assets/images/AboutPhoto3.png"
-                    alt=""
+                    src={AboutPhoto3}
                     className="w-full h-full"
                     style={{ objectFit: 'cover' }}
                     />
@@ -44,8 +46,7 @@ const GalleryAbout = () => {
                 <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-1 pt-8">
                     <img
                     id="PhotoAbout4"
-                    src="./src/assets/images/AboutPhoto4.png"
-                    alt=""
+                    src={AboutPhoto4}
                     className="w-full h-full"
                     style={{ objectFit: 'cover' }}
                     />
