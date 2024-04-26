@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Divider from '../UI/Divider';
 import Copyright from './Copyright';
 import { useEffect, useRef } from 'react';
+import Footer from "../components/Footer";
 
 const ProjectDetail = () => {
   const { projectTitle } = useParams();
@@ -31,20 +32,6 @@ const ProjectDetail = () => {
         {paragraph}
       </p>
     ));
-  };
-
-  const renderNextProjectPreview = () => {
-    return (
-      <div className="mt-10 mb-20">
-        <h2 className="text-lg font-bold">Next Project</h2>
-        <Link to={`/projects/${nextProject.title.toLowerCase()}`} className="text-primary hover:underline">
-          <div className="flex items-center space-x-4">
-            <img src={nextProject.imageBanner} alt={nextProject.title} className="w-20 h-20 object-cover rounded" />
-            <span>{nextProject.title}</span>
-          </div>
-        </Link>
-      </div>
-    );
   };
 
   return (
@@ -94,6 +81,9 @@ const ProjectDetail = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="navCur border-2 border-primary bg-primary text-whiteBackground text-TextoPequeñoPhone md:text-TextoNormal px-6 py-2 rounded-full transition-all duration-300 font-manrope absolute bottom--1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-none"
+            style={{
+              overflow: 'visible',
+          }}
           >
             Explore
           </a>
@@ -132,9 +122,10 @@ const ProjectDetail = () => {
           {`${project.role}`}
         </div>
 
-        <p className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText text-justify mb-4 md:mb-8">Explore</p>
+        <p className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText text-justify mb-2">Explore</p>
+        <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify mb-4 md:mb-8">{`${project.explore}`}</p>
 
-        <div className="imagePrototype">
+        <div className="imagePrototype mb-8 md:mb-16">
           <a
             href={project.link}
             target="_blank"
@@ -144,12 +135,26 @@ const ProjectDetail = () => {
             <img
               src={project.imagePrototype}
               alt={`${project.title}`}
-              className="w-full imagePrototype"
+              className="w-full h-full imagePrototype"
             />
           </a>
         </div>
+
+        <div className="flex flex-col md:flex-row relative bg-blackText">
+          <div className="flex-1 pb-0 md:pb-8 p-4 md:p-8">
+              <h2 className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-greyText text-justify mb-2 md:mb-4">Next Project</h2>
+              <Link to={`/projects/${nextProject.title.toLowerCase()}`} className="font-manrope text-TextoGrande md:text-TituloMediano text-whiteBackground nav">
+                  <span>{nextProject.title} 🡥</span>
+              </Link>
+          </div>
+          <div className="flex-1 relative p-4 md:p-8">
+              <Link to={`/projects/${nextProject.title.toLowerCase()}`} className="text-primary">
+                  <img src={nextProject.imageBanner} alt={nextProject.title} className="w-full h-48 md:h-full object-cover nav"/>
+              </Link>
+          </div>
+        </div>
       </div>
-      {renderNextProjectPreview()} {/* Renderizar vista previa del siguiente proyecto */}
+      <Footer />
       <Copyright />
     </div>
   );
