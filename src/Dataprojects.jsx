@@ -28,6 +28,11 @@ import MekaPrototype from '/src/assets/images/projects/Meka/MekaPrototype.png';
 import MekaBanner from '/src/assets/images/projects/Meka/MekaBanner.png';
 import MekaQuote from '/src/assets/images/projects/Meka/MekaQuote.png';
 
+import SuraThumbnail from '/src/assets/images/projects/Sura/SuraThumbnail.png';
+import SuraPrototype from '/src/assets/images/projects/Sura/SuraPrototype.png';
+import SuraBanner from '/src/assets/images/projects/Sura/SuraBanner.png';
+import SuraQuote from '/src/assets/images/projects/Sura/SuraQuote.png';
+
 import VrumThumbnail from '/src/assets/images/projects/Vrum/VrumThumbnail.png';
 import VrumPrototype from '/src/assets/images/projects/Vrum/VrumPrototype.png';
 import VrumBanner from '/src/assets/images/projects/Vrum/VrumBanner.png';
@@ -135,6 +140,23 @@ const Dataprojects = [
     imageQuote: MekaQuote,
     explore: 'Feel free to dive into the Figma prototype.',
     link: 'https://www.figma.com/proto/3t1iM9b8n5EJoNyrwoyEXp/MEKA?type=design&t=OgzKr9hpJb9gT2ll-0&scaling=contain&page-id=0%3A1&node-id=43-1004&starting-point-node-id=43%3A1004&show-proto-sidebar=1'
+  },
+  {
+    title: 'Sura SA',
+    year: '2024',
+    client: 'Case Study',
+    myrole: 'UI/UX Designer',
+    description: 'During this 3 challenging days in the 2024 edition of Sura Talent for Technology and Digital Training, Sura challenged us to improve the automation and self-management of technological incidents within the company. To tackle this challenge, my team and I were tasked with developing a comprehensive solution from scratch where we designed a robust infrastructure capable of properly processing, handling, resolving and categorizing incidents reported by users. The main goal was to optimize response times, enhance solution quality and improve user experience.\n\nThe proposal involved implementing a smart assistant (SA) that utilizes AWS and OpenAI technologies to automatically resolve or escalate incidents. This system not only benefits users by providing faster responses and solutions but also streamlines the work of technical staff and adds value to the organization as a whole. To ensure a comprehensive solution, we developed a model that covers everything from the back-end to the front-end, thus ensuring a complete and well-integrated proposal that we presented to the company.',
+    role: 'In this project, I took on an essential role as a UX/UI designer, responsible for creating the high-fidelity prototype that I presented to the company and a representative from the technical support team. I developed fully finished interfaces and incorporated dynamic interactions to bring realism to the operation of the smart assistant. This approach allowed me to effectively demonstrate the functionality of the system and facilitate the visualization of the final user experience.\n\nI was also in charge of developing the visual identity of the bot, ensuring that it reflected the familiarity of the Grupo Sura brand. I focused on maintaining coherence with the company’s standards and values, visually integrating the assistant within Sura’s technological solutions ecosystem. This meticulous design process ensured that the assistant was not only functional and efficient but also perceived as an integrated and coherent part of the brand.',
+    slogan: 'We Go Beyond',
+    tools: 'Tools: Figma',
+    typeproject: 'UI/UX Design',
+    imageThumbnail: SuraThumbnail,
+    imagePrototype: SuraPrototype,
+    imageBanner: SuraBanner,
+    imageQuote: SuraQuote,
+    explore: 'Feel free to dive into the Figma prototype.',
+    link: 'https://www.figma.com/proto/mAlflTNw3Ngl5KJUpdlIpk/Asistente-Inteligente-SURA?type=design&node-id=1-2&t=7eRj6KPio7N2Zdsc-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2'
   },
   {
     title: 'Vrum',

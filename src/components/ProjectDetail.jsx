@@ -34,6 +34,14 @@ const ProjectDetail = () => {
     ));
   };
 
+  const renderRoleWithLineBreaks = () => {
+    return project.role.split('\n').map((paragraph, index) => (
+      <p key={index} className="mb-4 md:mb-8 font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
+        {paragraph}
+      </p>
+    ));
+  };
+
   return (
     <div>
       <Navbar />
@@ -119,7 +127,7 @@ const ProjectDetail = () => {
 
         <div className="mb-4 md:mb-8 font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
           <p className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText text-justify mb-2">My Role</p>
-          {`${project.role}`}
+          {renderRoleWithLineBreaks()}
         </div>
 
         <p className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText text-justify mb-2">Explore</p>
