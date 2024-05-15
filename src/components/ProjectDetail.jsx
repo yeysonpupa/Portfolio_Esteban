@@ -157,7 +157,7 @@ const ProjectDetail = () => {
           </div>
           <div className="flex-1 relative p-4 md:p-8">
               <Link to={`/projects/${nextProject.title.toLowerCase()}`} className="text-primary">
-                  <img src={nextProject.imageBanner} alt={nextProject.title} className="w-full h-72 md:h-full object-cover nav"/>
+                  <img src={nextProject.imageBanner} alt={nextProject.title} className="w-full h-full object-cover nav"/>
               </Link>
           </div>
         </div>

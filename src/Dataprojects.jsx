@@ -38,6 +38,11 @@ import VrumPrototype from '/src/assets/images/projects/Vrum/VrumPrototype.png';
 import VrumBanner from '/src/assets/images/projects/Vrum/VrumBanner.png';
 import VrumQuote from '/src/assets/images/projects/Vrum/VrumQuote.png';
 
+import WillCareThumbnail from '/src/assets/images/projects/WillCare/WillCareThumbnail.png';
+import WillCarePrototype from '/src/assets/images/projects/WillCare/WillCarePrototype.png';
+import WillCareBanner from '/src/assets/images/projects/WillCare/WillCareBanner.png';
+import WillCareQuote from '/src/assets/images/projects/WillCare/WillCareQuote.png';
+
 const Dataprojects = [
   {
     title: 'AgeCuidados',
@@ -144,7 +149,7 @@ const Dataprojects = [
   {
     title: 'Sura SA',
     year: '2024',
-    client: 'Case Study',
+    client: 'Sura',
     myrole: 'UI/UX Designer',
     description: 'During this 3 challenging days in the 2024 edition of Sura Talent for Technology and Digital Training, Sura challenged us to improve the automation and self-management of technological incidents within the company. To tackle this challenge, my team and I were tasked with developing a comprehensive solution from scratch where we designed a robust infrastructure capable of properly processing, handling, resolving and categorizing incidents reported by users. The main goal was to optimize response times, enhance solution quality and improve user experience.\n\nThe proposal involved implementing a smart assistant (SA) that utilizes AWS and OpenAI technologies to automatically resolve or escalate incidents. This system not only benefits users by providing faster responses and solutions but also streamlines the work of technical staff and adds value to the organization as a whole. To ensure a comprehensive solution, we developed a model that covers everything from the back-end to the front-end, thus ensuring a complete and well-integrated proposal that we presented to the company.',
     role: 'In this project, I took on an essential role as a UX/UI designer, responsible for creating the high-fidelity prototype that I presented to the company and a representative from the technical support team. I developed fully finished interfaces and incorporated dynamic interactions to bring realism to the operation of the smart assistant. This approach allowed me to effectively demonstrate the functionality of the system and facilitate the visualization of the final user experience.\n\nI was also in charge of developing the visual identity of the bot, ensuring that it reflected the familiarity of the Grupo Sura brand. I focused on maintaining coherence with the company’s standards and values, visually integrating the assistant within Sura’s technological solutions ecosystem. This meticulous design process ensured that the assistant was not only functional and efficient but also perceived as an integrated and coherent part of the brand.',
@@ -174,6 +179,23 @@ const Dataprojects = [
     imageQuote: VrumQuote,
     explore: 'Feel free to dive into the Figma prototype.',
     link: 'https://www.figma.com/proto/JDcYXUIQQHEfIZJFlaYM3s/Vrum?type=design&t=OgzKr9hpJb9gT2ll-0&scaling=scale-down&page-id=0%3A1&node-id=9-114&starting-point-node-id=9%3A114'
+  },
+  {
+    title: 'WillCare',
+    year: '2023',
+    client: 'Prader-Willi Association',
+    myrole: 'UI/UX Designer',
+    description: 'The Prader-Willi syndrome is a rare genetic disorder characterized by a range of medical and behavioral challenges, including difficulties in appetite control, behavioral problems, low muscle tone, developmental delays, and, in some cases, intellectual disability. Individuals with Prader-Willi syndrome often have insatiable appetites and a tendency toward obesity if their caloric intake is not carefully monitored.\n\nIn this project, our team collaborated closely with the Colombian Association of Prader-Willi Syndrome (ACSPW), a non-profit organization dedicated to supporting individuals affected by the condition and their families in Colombia. Together, we worked on designing and developing a high-fidelity prototype of a nutritional monitoring platform to assist patients and their caregivers in better managing their diet and controlling their weight. This prototype was created using Figma, allowing for a detailed visualization of the user interface and user experience before moving on to full development.\n\nSubsequently, the high-fidelity prototype was implemented through development in ReactJS. This technological choice enabled the creation of a dynamic and highly functional web application that can be easily scalable and adaptable to the changing needs of users and the Prader-Willi community.',
+    role: 'As a UI/UX designer on the WillCare project, I played a central role in designing a nutritional monitoring platform for patients affected by the orphan condition of Prader-Willi. My focus was on creating an intuitive and accessible user experience, considering the specific needs of this demographic. I collaborated closely with healthcare experts and patients to comprehend their challenges, ensuring the solutions developed facilitated food intake tracking, weight control and diet management. From conceptualization to implementation, I also worked closely with the development team, translating design concepts into code to ensure the platform was not only functional and effective but also comforting and empathetic for patients and their caregivers.',
+    slogan: 'Nutrition made simple, care made personal',
+    tools: 'Tools: Figma • ReactJS',
+    typeproject: 'UI/UX Design',
+    imageThumbnail: WillCareThumbnail,
+    imagePrototype: WillCarePrototype,
+    imageBanner: WillCareBanner,
+    imageQuote: WillCareQuote,
+    explore: 'Feel free to dive into the Figma prototype.',
+    link: 'https://www.figma.com/proto/GX4xN2BraExIKVSHnaRKLW/WillCare?node-id=261-3088&t=yeerdUN2DRHAN3T7-0&scaling=contain&page-id=1%3A3&starting-point-node-id=261%3A3088'
   }
 ];
 
