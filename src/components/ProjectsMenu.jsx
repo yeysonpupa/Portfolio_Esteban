@@ -33,7 +33,7 @@ const ProjectsMenu = () => {
           opacity: hoveredProject ? 0.70 : 0,
         }}
       />
-      <div className="flex flex-col items-center md:items-start justify-center pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 bg-transparent min-h-screen relative">
+      <div className="flex flex-col items-center justify-center pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 bg-transparent min-h-screen relative">
         {Dataprojects.map((project, index) => (
           <Link
             key={project.title}
