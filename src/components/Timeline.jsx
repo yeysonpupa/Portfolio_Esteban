@@ -13,20 +13,20 @@ const Timeline = () => {
                 {`Informatics Engineering Student • `}<span className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-primary mt-2 md:mt-4 text-justify pr-8 md:pr-16 font-bold">{`Universidad de La Sabana`}</span>
             </p>
             <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText mt-2 md:mt-4 text-justify pr-8 md:pr-16">
-                {`Degree in Informatics Engineering at the University of La Sabana with experience in several hackathons and challenges with a focus on UI/UX design and Front-End development.`}
+                {`Degree in Informatics Engineering at Universidad de La Sabana with experience in several hackathons and challenges with a focus on UI/UX Design and Front-End development.`}
             </p>
             <div className="pr-8 md:pr-16">
                 <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText mt-2 md:mt-4 text-justify ml-10 md:ml-20">
-                    <span className="text-primary font-manrope text-TextoPequeñoPhone md:text-TextoNormal">2023 -</span>{` First place winner in the seventh edition of SabanaHack.`}
+                    <span className="text-primary font-manrope text-TextoPequeñoPhone md:text-TextoNormal">2023 -</span>{` First place winner in the seventh edition of Sabana Hack.`}
                 </p>
                 <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText mt-1 md:mt-2 text-justify ml-10 md:ml-20">
                     <span className="text-primary font-manrope text-TextoPequeñoPhone md:text-TextoNormal">2023 -</span>{` First place winner in the first edition of Unisabana Design Challenge.`}
                 </p>
                 <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText mt-1 md:mt-2 text-justify ml-10 md:ml-20">
-                    <span className="text-primary font-manrope text-TextoPequeñoPhone md:text-TextoNormal">2022 -</span>{` Second place winner in the sixth edition of SabanaHack.`}
+                    <span className="text-primary font-manrope text-TextoPequeñoPhone md:text-TextoNormal">2022 -</span>{` Second place winner in the sixth edition of Sabana Hack.`}
                 </p>
                 <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText mt-1 md:mt-2 text-justify ml-10 md:ml-20">
-                    <span className="text-primary font-manrope text-TextoPequeñoPhone md:text-TextoNormal">2022 -</span>{` Second place winner in the fifth edition of SabanaHack.`}
+                    <span className="text-primary font-manrope text-TextoPequeñoPhone md:text-TextoNormal">2022 -</span>{` Second place winner in the fifth edition of Sabana Hack.`}
                 </p>
             </div>
             <div className="flex mt-2 md:mt-4">
@@ -75,7 +75,7 @@ const Timeline = () => {
                 {`Junior Front End Developer • `}<span className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-primary mt-2 md:mt-4 text-justify pr-8 md:pr-16 font-bold">{`Dooku Startup`}</span>
             </p>
             <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText mt-2 md:mt-4 text-justify pr-8 md:pr-16">
-                {`Developer at Dooku Startup, a project initiated under the leadership of law graduates from EAFIT University in Medellín, Colombia, aimed at mass customizing documents, automating their creation and facilitating their management.`}
+                {`Development of a Full-Stack project initiated under the idea and leadership of law graduates from EAFIT University in Medellín, Colombia, aimed at mass customizing documents, automating their creation and facilitating their management.`}
             </p>
         </div>
     );
