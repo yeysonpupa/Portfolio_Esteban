@@ -15,7 +15,7 @@ const AboutHero = () => {
       <div className="flex flex-col md:flex-row pb-4 md:pb-8">
         <div className="md:w-1/2 pr-0 md:pr-16">
           <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
-            {`Concluding my informatics engineering degree and looking forward to immersing myself in professional internships, specifically emphasizing UI/UX and front-end development. I'm all about the attention to details, collaborative teamwork, and tackling challenges with a dash of critical thinking. Fluent in both Spanish and English, so let's make things happen!`}
+            {`I am a scholarship student concluding my Informatics Engineering degree at Universidad de La Sabana, with a special interest and previous experience in UI/UX design and Front-End development. I'm all about the attention to details, collaborative teamwork and tackling challenges with a dash of critical thinking. Fluent in both Spanish and English, so let's make things happen!`}
           </p>
 
           <div className="pt-4 md:pt-8 pb-4 md:pb-8">
@@ -26,7 +26,7 @@ const AboutHero = () => {
 
             <div className="mb-2 md:mb-4">
               <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">Currently</p>
-              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Informatics engineering student</p>
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Informatics Engineering student</p>
             </div>
 
             <div>
