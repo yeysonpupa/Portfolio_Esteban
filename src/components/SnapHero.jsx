@@ -6,8 +6,8 @@ const SnapHero = () => {
       </p>
 
       <p className="font-museomoderno text-TituloExtraGrandePhone md:text-TituloGrande text-blackText leading-none pb-8">
-        I snap <span className="font-zillaslab text-TituloExtraGrandePhone md:text-TituloGrande text-primary">{`pictures`}</span> <br />
-        when not coding
+        Some <span className="font-zillaslab text-TituloExtraGrandePhone md:text-TituloGrande text-primary">{`digital art`}</span> <br />
+        I edit and create
       </p>
     </div>
   );

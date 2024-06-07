@@ -94,6 +94,16 @@ const Navbar = ({ navbarTextColor }) => {
             About
             {renderCircle('about')}
           </Link>
+          <Link
+            to="/snap"
+            className="text-TextoNormal font-manrope text-blackText mb-4 relative"
+            onMouseEnter={() => handleMouseEnter('snap')}
+            onMouseLeave={handleMouseLeave}
+            onClick={closeMenu}
+          >
+            Archive
+            {renderCircle('snap')}
+          </Link>
         </div>
       ) : (
         <div className="hidden md:flex space-x-12">
@@ -121,6 +131,19 @@ const Navbar = ({ navbarTextColor }) => {
             >
               {renderCircle('about')}
               About
+            </Link>
+          </div>
+          <div className="relative inline-flex items-center">
+            <Link
+              to="/snap"
+              className={`nav text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
+              onMouseEnter={() => handleMouseEnter('snap')}
+              onMouseLeave={handleMouseLeave}
+              onMouseOver={() => setIsHovering(true)}
+              onMouseOut={() => setIsHovering(false)}
+            >
+              {renderCircle('snap')}
+              Archive
             </Link>
           </div>
         </div>

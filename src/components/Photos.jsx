@@ -9,6 +9,7 @@ const Photos = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [maxImageHeight, setMaxImageHeight] = useState(0);
+  const [columns, setColumns] = useState(2); // default to 2 columns
 
   useEffect(() => {
     const calculateMaxHeight = () => {
@@ -17,11 +18,25 @@ const Photos = () => {
       setMaxImageHeight(maxHeight);
     };
 
+    const updateColumns = () => {
+      if (window.innerWidth >= 1024) {
+        setColumns(4);
+      } else if (window.innerWidth >= 768) {
+        setColumns(3);
+      } else {
+        setColumns(2);
+      }
+    };
+
     calculateMaxHeight();
+    updateColumns();
+
     window.addEventListener('resize', calculateMaxHeight);
+    window.addEventListener('resize', updateColumns);
 
     return () => {
       window.removeEventListener('resize', calculateMaxHeight);
+      window.removeEventListener('resize', updateColumns);
     };
   }, []);
 
@@ -54,11 +69,11 @@ const Photos = () => {
     config: config.stiff,
   });
 
-  const galleryChunks = window.innerWidth >= 768 ? chunkArray(DataGallery, 6) : chunkArray(DataGallery, 9);
+  const galleryChunks = chunkArray(DataGallery, columns);
 
   return (
-    <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-0 bg-whiteBackground">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="px-8 md:px-16 pt-0 bg-whiteBackground">
+      <div className={`grid gap-4 grid-cols-2`}>
         {galleryChunks.map((row, rowIndex) => (
           <div key={rowIndex} className="flex flex-col">
             {row.map((item, columnIndex) => (
@@ -66,8 +81,8 @@ const Photos = () => {
                 key={columnIndex}
                 src={item.imageGallery}
                 alt={item.title}
-                className="navCur w-full h-auto mb-4 cursor-none"
-                style={{ ...imageAnimation, cursor: 'none' }}
+                className="navCur w-full h-auto mb-4 cursor-pointer"
+                style={imageAnimation}
                 onClick={() => openModal(item)}
               />
             ))}
@@ -85,7 +100,7 @@ const Photos = () => {
       >
         {selectedImage && (
           <animated.div style={modalAnimation} className="text-right text-bold font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-whiteBackground">
-            <button onClick={closeModal} className="cursor-none mb-2">
+            <button onClick={closeModal} className="cursor-pointer mb-2">
               <FontAwesomeIcon icon={faTimes} />
             </button>
             <animated.img
