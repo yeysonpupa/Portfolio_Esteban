@@ -5,7 +5,7 @@ import OrangeMan from '/src/assets/images/gallery/OrangeMan.png';
 import OrangeWoman from '/src/assets/images/gallery/OrangeWoman.png';
 import PhotocopyMan from '/src/assets/images/gallery/PhotocopyMan.png';
 import PhotocopyWoman from '/src/assets/images/gallery/PhotocopyWoman.png';
-import Plants from '/src/assets/images/gallery/Plants.png';
+import Plants from '/src/assets/images/gallery/Plants.jpg';
 
 const DataGallery = [
   {
