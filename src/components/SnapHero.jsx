@@ -7,7 +7,7 @@ const SnapHero = () => {
 
       <p className="font-museomoderno text-TituloExtraGrandePhone md:text-TituloGrande text-blackText leading-none pb-8">
         Some <span className="font-zillaslab text-TituloExtraGrandePhone md:text-TituloGrande text-primary">{`digital art`}</span> <br />
-        I edit and create
+        and photography made by me
       </p>
     </div>
   );
