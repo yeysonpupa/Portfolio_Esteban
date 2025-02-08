@@ -2,6 +2,8 @@ import AboutPhoto1 from '../assets/images/AboutPhoto1.png';
 import AboutPhoto2 from '../assets/images/AboutPhoto2.png';
 import AboutPhoto3 from '../assets/images/AboutPhoto3.png';
 import AboutPhoto4 from '../assets/images/AboutPhoto4.png';
+import AboutPhoto5 from '../assets/images/AboutPhoto5.png';
+import AboutPhoto6 from '../assets/images/AboutPhoto6.png';
 
 const GalleryAbout = () => {
     return (
@@ -17,6 +19,24 @@ const GalleryAbout = () => {
             </div>
             <p className="font-manrope text-TextoMedianoPhone md:text-TituloNormal text-blackText">Memories<span className="text-TextoMedianoPhone md:text-TituloNormal text-primary font-museomoderno">.</span></p>
             <div className="flex flex-col md:flex-row flex-wrap">
+            <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-0 md:px-1 pt-4 md:pt-8">
+                    <img
+                    id="PhotoAbout5"
+                    src={AboutPhoto5}
+                    className="w-full h-full"
+                    style={{ objectFit: 'cover' }}
+                    />
+                    <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText pt-2 md:pt-4">Sabana Hack 2024</p>
+                </div>
+                <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-0 md:px-1 pt-4 md:pt-8">
+                    <img
+                    id="PhotoAbout6"
+                    src={AboutPhoto6}
+                    className="w-full h-full"
+                    style={{ objectFit: 'cover' }}
+                    />
+                    <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText pt-2 md:pt-4">NASA Space Challenge</p>
+                </div>
                 <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-0 md:px-1 pt-4 md:pt-8">
                     <img
                     id="PhotoAbout1"

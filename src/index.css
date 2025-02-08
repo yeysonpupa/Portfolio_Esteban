@@ -5,13 +5,13 @@
 @layer base {
 
   ::-moz-selection {
-    background: #ef40405a
+    background: #1F45295a
   }
   ::-webkit-selection {
-    background: #ef40405a
+    background: #1F45295a
   }
   ::selection {
-    background: #ef40405a
+    background: #1F45295a
   }
 
   .text-smooth {

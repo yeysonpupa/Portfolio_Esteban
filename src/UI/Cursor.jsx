@@ -52,17 +52,17 @@ export default function Cursor() {
       });
 
       element.addEventListener("mouseleave", function () {
-        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1", backgroundColor: "#EF4040" });
+        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1", backgroundColor: "#1F4529" });
       });
     });
 
     navElements.forEach((element) => {
       element.addEventListener("mouseenter", function () {
-        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "0.5", backgroundColor: "#EF4040" });
+        gsap.to(curs.current, { height: "25px", width: "25px", ease: "expo.inout", opacity: "0.5", backgroundColor: "#1F4529" });
       });
 
       element.addEventListener("mouseleave", function () {
-        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1", backgroundColor: "#EF4040" });
+        gsap.to(curs.current, { height: "15px", width: "15px", opacity: "1", backgroundColor: "#1F4529" });
       });
     });
 

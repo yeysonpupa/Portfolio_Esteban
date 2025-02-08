@@ -18,6 +18,11 @@ import DookuPrototype from '/src/assets/images/projects/Dooku/DookuPrototype.png
 import DookuBanner from '/src/assets/images/projects/Dooku/DookuBanner.png';
 import DookuQuote from '/src/assets/images/projects/Dooku/DookuQuote.png';
 
+import ExoskyThumbnail from '/src/assets/images/projects/Exosky/ExoskyThumbnail.png';
+import ExoskyPrototype from '/src/assets/images/projects/Exosky/ExoskyPrototype.png';
+import ExoskyBanner from '/src/assets/images/projects/Exosky/ExoskyBanner.png';
+import ExoskyQuote from '/src/assets/images/projects/Exosky/ExoskyQuote.png';
+
 import GameHiveThumbnail from '/src/assets/images/projects/GameHive/GameHiveThumbnail.png';
 import GameHivePrototype from '/src/assets/images/projects/GameHive/GameHivePrototype.png';
 import GameHiveBanner from '/src/assets/images/projects/GameHive/GameHiveBanner.png';
@@ -27,6 +32,11 @@ import MekaThumbnail from '/src/assets/images/projects/Meka/MekaThumbnail.png';
 import MekaPrototype from '/src/assets/images/projects/Meka/MekaPrototype.png';
 import MekaBanner from '/src/assets/images/projects/Meka/MekaBanner.png';
 import MekaQuote from '/src/assets/images/projects/Meka/MekaQuote.png';
+
+import SarcamThumbnail from '/src/assets/images/projects/Sarcam/SarcamThumbnail.png';
+import SarcamPrototype from '/src/assets/images/projects/Sarcam/SarcamPrototype.png';
+import SarcamBanner from '/src/assets/images/projects/Sarcam/SarcamBanner.png';
+import SarcamQuote from '/src/assets/images/projects/Sarcam/SarcamQuote.png';
 
 import SuraThumbnail from '/src/assets/images/projects/Sura/SuraThumbnail.png';
 import SuraPrototype from '/src/assets/images/projects/Sura/SuraPrototype.png';
@@ -113,6 +123,23 @@ const Dataprojects = [
     link: 'https://youtu.be/RmvlYZTsI0o?si=k2gfCoZxcQ3PqgxA'
   },
   {
+    title: 'Exosky!',
+    year: '2024',
+    client: 'NASA',
+    myrole: 'Front-End Developer',
+    description: 'Exosky! is a project that redefines how we experience space exploration by combining cutting-edge web-based technology with immersive virtual reality. This platform is designed to bring the vastness of the cosmos closer to users through an integration of data visualization and real-time information. The web version, built with Three.js, allows users to navigate a detailed and dynamic representation of the universe, interacting with celestial bodies and exploring their properties with high realism. \n\nUsing data from NASA and the Gaia mission, Exosky! provides an accurate representation of over 5,500 confirmed exoplanets and more than a billion stars, delivering an unprecedented level of the night sky where users can embark on virtual space journeys, observing planets and star systems as if they were standing on an alien world. The VR version, developed in Unity, further this experience by offering a fully immersive environment, where users can physically move through space and interact with the celestial bodies. \n\nBy combining astronomy and advanced digital technologies, Exosky! offers an educational and exploratory tool that appeals to both space enthusiasts and researchers alike.',
+    role: 'As a Front-End Developer for Exosky!, I was focus on designing and implementing the interactive elements of the web-based platform using Three.js, ensuring smooth rendering and realistic celestial simulations. I worked closely with Back-End developers to integrate real-time data from astronomical databases, guaranteeing accurate and responsive visual representations. Additionally, I contributed to the VR version by collaborating on interface design and optimizing performance within Unity to deliver an immersive experience.',
+    slogan: 'A Sky Full of Stars',
+    tools: 'Tools: Three.js • Unity • VueJS',
+    typeproject: 'Data & Development',
+    imageThumbnail: ExoskyThumbnail,
+    imagePrototype: ExoskyPrototype,
+    imageBanner: ExoskyBanner,
+    imageQuote: ExoskyQuote,
+    explore: 'Feel free to dive into the live site demostration.',
+    link: 'https://www.youtube.com/watch?v=EYYmqgOJPh0'
+  },
+  {
     title: 'GameHive',
     year: '2023',
     client: 'CodeBits • Design Challenge',
@@ -145,6 +172,23 @@ const Dataprojects = [
     imageQuote: MekaQuote,
     explore: 'Feel free to dive into the Figma prototype.',
     link: 'https://www.figma.com/proto/3t1iM9b8n5EJoNyrwoyEXp/MEKA?type=design&t=OgzKr9hpJb9gT2ll-0&scaling=contain&page-id=0%3A1&node-id=43-1004&starting-point-node-id=43%3A1004&show-proto-sidebar=1'
+  },
+  {
+    title: 'SARCAM',
+    year: '2024',
+    client: 'National Institute of Cancer',
+    myrole: 'Front-end Developer',
+    description: 'SARCAM (Automated System for Review and Correction of Mammography Records) is an artificial intelligence solution developed to improve the accuracy and efficiency of medical data management. This AI-driven tool was specifically designed for the National Institute of Cancer as part of the Sabana Hack 2024, aiming to change how unstructured medical records are analyzed and processed in the healthcare industry. \n\nBuilt with Python and using IBM’s WatsonX, SARCAM applies machine learning and natural language processing (NLP) techniques to interpret vast amounts of patient history dat in just seconds. The system automatically identifies inconsistencies, extracts key medical insights and standardizes mammography records, significantly reducing the time and effort required for manual data verification. This not only improves operational efficiency but also ensures higher accuracy in medical diagnoses and treatment planning.',
+    role: 'As a Front-End Developer in the SARCAM project, my primary responsibility was to design and develop an intuitive and efficient user interface that enables medical professionals to interact with the AI-driven system. I focused on creating a dashboard that allows users to review the AI-generated insights, visualize data trends and manage patient records. I worked closely with the backend and AI teams, guaranteeing an optimal data flow and user experience.',
+    slogan: 'Ahead of Cancer',
+    tools: 'Tools: Python • Streamlit • WatsonX',
+    typeproject: 'Data & Development',
+    imageThumbnail: SarcamThumbnail,
+    imagePrototype: SarcamPrototype,
+    imageBanner: SarcamBanner,
+    imageQuote: SarcamQuote,
+    explore: 'Feel free to dive into the live site demostration.',
+    link: 'https://www.youtube.com/watch?v=iANbQgGEbEA2'
   },
   {
     title: 'Sura SA',

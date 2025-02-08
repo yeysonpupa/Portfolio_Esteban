@@ -3,7 +3,10 @@ import MyPhoto from '../assets/images/MyPhoto.png';
 const AboutHero = () => {
   return (
     <div className="pr-8 pl-8 md:pr-16 md:pl-16 pt-8 md:pt-16 pb-8 bg-whiteBackground">
-      <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText ml-1">
+
+      <div className="flex flex-col md:flex-row pb-4 md:pb-8">
+        <div className="md:w-1/2 pr-0 md:pr-16">
+        <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText ml-1">
         A little bit more about me...
       </p>
 
@@ -11,11 +14,8 @@ const AboutHero = () => {
         Hello! I am <br />Esteban Pulido{' '}
         <span className="font-museomoderno text-TituloExtraGrandePhone md:text-TituloGrande text-primary">{`:)`}</span>
       </p>
-
-      <div className="flex flex-col md:flex-row pb-4 md:pb-8">
-        <div className="md:w-1/2 pr-0 md:pr-16">
           <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText text-justify">
-            {`I am a scholarship student concluding my Informatics Engineering degree at Universidad de La Sabana, with a special interest and previous experience in UI/UX Design and Front-End development. I'm all about the attention to details, collaborative teamwork and tackling challenges with a dash of critical thinking. Fluent in both Spanish and English, so let's make things happen!`}
+            {`I am an Informatics Engineering professional with experience in UI/UX Design, Product Management and Front-End development. I'm all about the attention to details, collaborative teamwork and tackling challenges with critical thinking. Also, fluent in both Spanish and English, so let's make things happen!`}
           </p>
 
           <div className="pt-4 md:pt-8 pb-4 md:pb-8">
@@ -26,7 +26,7 @@ const AboutHero = () => {
 
             <div className="mb-2 md:mb-4">
               <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">Currently</p>
-              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Informatics Engineering student</p>
+              <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">Product Owner at Virtuagym</p>
             </div>
 
             <div>
@@ -40,7 +40,7 @@ const AboutHero = () => {
           <img
             src={MyPhoto}
             alt="Profile"
-            className="w-full h-72 md:h-full object-cover"
+            className="w-full h-full object-cover"
           />
           <a
             href="https://www.canva.com/design/DAF-xqdbyS0/tVsHEfDmDrOw9-rjhHnmQQ/view?utm_content=DAF-xqdbyS0&utm_campaign=designshare&utm_medium=link&utm_source=editor"

@@ -48,10 +48,10 @@ const LatestWorks = () => {
                             overflow: 'hidden',
                         }}
                     >
-                        <Link to={`/projects/${Dataprojects[6].title.toLowerCase()}`}>
+                        <Link to={`/projects/${Dataprojects[4].title.toLowerCase()}`}>
                             <img
-                                src={Dataprojects[6].imageThumbnail}
-                                alt={Dataprojects[6].title}
+                                src={Dataprojects[4].imageThumbnail}
+                                alt={Dataprojects[4].title}
                                 className="w-full h-full flex-1 imagePrototype"
                                 style={{ objectFit: 'cover', transform: `scale(${hoveredImage1 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
                                 onMouseEnter={handleHoverImage1}
@@ -60,8 +60,8 @@ const LatestWorks = () => {
                         </Link>
                     </div>
                     <div className="flex items-center justify-between">
-                        <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">{Dataprojects[6].title}</p>
-                        <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">{Dataprojects[6].typeproject}</p>
+                        <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">{Dataprojects[4].title}</p>
+                        <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">{Dataprojects[4].typeproject}</p>
                     </div>
                 </div>
 
@@ -73,9 +73,10 @@ const LatestWorks = () => {
                             overflow: 'hidden',
                             }}
                         >
-                            <Link to={`/projects/${Dataprojects[1].title.toLowerCase()}`}>
+                            <Link to={`/projects/${Dataprojects[7].title.toLowerCase()}`}>
                                 <img 
-                                    src={Dataprojects[1].imageThumbnail} alt={Dataprojects[1].title} 
+                                    src={Dataprojects[7].imageThumbnail}
+                                    alt={Dataprojects[7].title} 
                                     className="w-full max-h-full md:max-h-56 2xl:max-h-96 imagePrototype" 
                                     style={{objectFit: 'cover', transform: `scale(${hoveredImage2 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
                                     onMouseEnter={handleHoverImage2}
@@ -88,8 +89,8 @@ const LatestWorks = () => {
                     <div className="flex-1 flex flex-col justify-between">
                         <div className="mb-4">
                             <div className="flex items-center justify-between">
-                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">{Dataprojects[1].title}</p>
-                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">{Dataprojects[1].typeproject}</p>
+                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">{Dataprojects[7].title}</p>
+                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">{Dataprojects[7].typeproject}</p>
                             </div>
                         </div>
                         <div>
@@ -100,10 +101,10 @@ const LatestWorks = () => {
                                     overflow: 'hidden',
                                     }}
                                  >
-                                    <Link to={`/projects/${Dataprojects[4].title.toLowerCase()}`}>
+                                    <Link to={`/projects/${Dataprojects[8].title.toLowerCase()}`}>
                                         <img 
-                                            src={Dataprojects[4].imageThumbnail}
-                                            alt={Dataprojects[4].title} 
+                                            src={Dataprojects[8].imageThumbnail}
+                                            alt={Dataprojects[8].title} 
                                             className="w-full max-h-full md:max-h-56 2xl:max-h-96 imagePrototype" 
                                             style={{objectFit: 'cover', transform: `scale(${hoveredImage3 ? 1.1 : 1})`, transition: 'transform 0.3s ease', }}
                                             onMouseEnter={handleHoverImage3}
@@ -114,8 +115,8 @@ const LatestWorks = () => {
                             </div>
 
                             <div className="flex items-center justify-between">
-                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">{Dataprojects[4].title}</p>
-                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">{Dataprojects[4].typeproject}</p>
+                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-blackText">{Dataprojects[8].title}</p>
+                                <p className="font-manrope text-TextoPequeñoPhone md:text-TextoNormal text-greyText">{Dataprojects[8].typeproject}</p>
                             </div>
                         </div>
                     </div>
