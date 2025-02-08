@@ -135,7 +135,7 @@ const Navbar = ({ navbarTextColor }) => {
           </div>
           <div className="relative inline-flex items-center">
             <Link
-              to="/snap"
+              to="/snap" 
               className={`nav text-TextoNormal font-manrope cursor-none ${navbarTextColor}`}
               onMouseEnter={() => handleMouseEnter('snap')}
               onMouseLeave={handleMouseLeave}
